@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThoughtDef>
+		<defName>RH_TET_ObservedJabberslythe</defName>
+		<icon>Things/Mote/Thought/TET_ChaosSpawn</icon>
+		<showBubble>true</showBubble>
+		<thoughtClass>Thought_MemoryObservation</thoughtClass>
+		<durationDays>0.25</durationDays>
+		<stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>observed jabberslythe</label>
+				<description>Oh the horror! The disgustingness of the jabberslythe is truly unparalleled.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<ThoughtDef>
+		<defName>RH_TET_ObservedJabberslytheDead</defName>
+		<icon>Things/Mote/Thought/TET_ChaosSpawnDead</icon>
+		<showBubble>true</showBubble>
+		<thoughtClass>Thought_MemoryObservation</thoughtClass>
+		<durationDays>0.25</durationDays>
+		<stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>observed dead jabberslythe</label>
+				<description>By the gods, the jabberslythe horror is dead. A mighty terror has been removed from the world.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<ThoughtDef>
+		<defName>RH_TET_ObservedJabberslytheEnraged</defName>
+		<icon>Things/Mote/Thought/TET_Terrified</icon>
+		<showBubble>true</showBubble>
+		<thoughtClass>Thought_MemoryObservation</thoughtClass>
+		<durationDays>0.2</durationDays>
+		<stackedEffectMultiplier>1.0</stackedEffectMultiplier>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>observed enraged jabberslythe</label>
+				<description>Wrath and ruin! The great jabberslythe beast is on a rampage!</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>

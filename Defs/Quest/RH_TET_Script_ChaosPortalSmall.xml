@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<QuestScriptDef>
+		<defName>RH_TET_OpportunitySite_ChaosPortalSmall</defName>
+		<rootSelectionWeight>0.8</rootSelectionWeight>
+		<rootMinPoints>400</rootMinPoints>
+		<autoAccept>true</autoAccept>
+		<canGiveRoyalFavor>true</canGiveRoyalFavor>
+		<questNameRules>
+			<rulesStrings>
+				<li>questName->Small chaos portal</li>
+				<li>questName->The Chaos Portal</li>
+				<li>questName->Destroy the Chaos Portal</li>
+			</rulesStrings>
+		</questNameRules>
+		<questDescriptionRules>
+			<rulesStrings>
+				<li>questDescription->[asker_nameFull], [asker_faction_leaderTitle] of [asker_faction_name], has sent us a message.\n\nA group of chaos followers have built a chaos portal, and are attempting to summon large amounts of chaos denizens from the dark realm. Destroy this portal to prevent the beasts from potentially over running the world. They've asked us to destroy it, which means that the portal must be eliminated.\n\n[asker_nameDef] says that [sitePart0_description].\n\nIf we succeed, [allRewardsDescriptions]</li>
+			</rulesStrings>
+		</questDescriptionRules>
+		<root Class="QuestNode_Sequence">
+			<nodes>
+				<li Class="QuestNode_SubScript">
+					<def>Util_RandomizePointsChallengeRating</def>
+					<parms>
+						<pointsFactorTwoStar>1.5</pointsFactorTwoStar>
+						<pointsFactorThreeStar>2</pointsFactorThreeStar>
+					</parms>
+				</li>
+				<li Class="QuestNode_SubScript">
+					<def>Util_AdjustPointsForDistantFight</def>
+				</li>
+		
+				<li Class="QuestNode_GetMap"/>
+		
+				<li Class="QuestNode_GetPawn">
+					<storeAs>asker</storeAs>
+					<mustBeFactionLeader>true</mustBeFactionLeader>
+					<allowPermanentEnemyFaction>false</allowPermanentEnemyFaction>
+					<hostileWeight>0.15</hostileWeight>
+				</li>
+
+				<li Class="TheEndTimes.QuestNode_GetSiteTileFlatHills">
+					<storeAs>siteTile</storeAs>
+					<preferCloserTiles>true</preferCloserTiles>
+				</li>
+
+				<li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+					<storeAs>sitePartDefs</storeAs>
+					<storeFactionAs>siteFaction</storeFactionAs>
+					<sitePartsTags>
+						<li><tag>RH_TET_ChaosPortalSmall</tag></li>
+					</sitePartsTags>
+					<mustBeHostileToFactionOf>$asker</mustBeHostileToFactionOf>
+				</li>
+
+				<li Class="TheEndTimes.QuestNode_GetDefaultSitePartsParamsChaos">
+					<tile>$siteTile</tile>
+					<faction>$siteFaction</faction>
+					<sitePartDefs>$sitePartDefs</sitePartDefs>
+					<storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+				</li>
+        
+				<li Class="QuestNode_GetSiteThreatPoints">
+					<storeAs>sitePoints</storeAs>
+					<sitePartsParams>$sitePartsParams</sitePartsParams>
+				</li>
+				<li Class="QuestNode_SubScript">
+					<def>Util_GetDefaultRewardValueFromPoints</def>
+					<parms>
+						<points>$sitePoints</points>
+					</parms>
+				</li>
+
+				<li Class="QuestNode_SubScript">
+					<def>Util_GenerateSite</def>
+				</li>
+        
+				<li Class="QuestNode_SpawnWorldObjects">
+					<worldObjects>$site</worldObjects>
+				</li>
+
+				<li Class="QuestNode_WorldObjectTimeout">
+					<worldObject>$site</worldObject>
+					<isQuestTimeout>true</isQuestTimeout>
+					<delayTicks>$(randInt(12,28)*60000)</delayTicks>
+					<inSignalDisable>site.MapGenerated</inSignalDisable>
+					<node Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Letter">
+								<label>Quest expired: [resolvedQuestName]</label>
+								<text>The chaos portal has been destroyed by others. Count yourself lucky. The quest [resolvedQuestName] has expired.</text>
+							</li>
+							<li Class="QuestNode_End">
+								<outcome>Fail</outcome>
+							</li>
+						</nodes>
+					</node>
+				</li>
+
+				<!-- If we enter and leave, the map is destroyed. Fail the quest. -->
+				<li Class="QuestNode_Signal">
+					<inSignal>site.Destroyed</inSignal>
+					<node Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Letter">
+								<label TKey="LetterLabelQuestFailed">Quest failed: [resolvedQuestName]</label>
+								<text TKey="LetterTextQuestFailed">After being discovered, the chaos denziens were swarmed with enemies and defeated. The quest [resolvedQuestName] has ended.</text>
+							</li>
+							<li Class="QuestNode_End">
+								<outcome>Fail</outcome>
+							</li>
+						</nodes>
+					</node>
+				</li>
+		
+				<li Class="QuestNode_Signal">
+					<inSignal>site.AllEnemiesDefeated</inSignal>
+					<node Class="QuestNode_GiveRewards">
+						<parms>
+							<allowGoodwill>true</allowGoodwill>
+							<allowRoyalFavor>true</allowRoyalFavor>
+							<chosenPawnSignal>ChosenPawnForReward</chosenPawnSignal>
+						</parms>
+						<customLetterLabel>Payment arrived</customLetterLabel>
+						<customLetterText>You have destroyed the chaos portal!\n\nThe payment from [asker_faction_name] has arrived.</customLetterText>
+						<nodeIfChosenPawnSignalUsed Class="QuestNode_Letter">
+							<letterDef>ChoosePawn</letterDef>
+							<label>[asker_faction_royalFavorLabel]</label>
+							<text>These colonists participated in the victory for the quest [resolvedQuestName]. [asker_definite] wants to know who should receive the [royalFavorReward_amount] [asker_faction_royalFavorLabel] favor for this service.</text>
+							<useColonistsOnMap>$site</useColonistsOnMap>
+							<chosenPawnSignal>ChosenPawnForReward</chosenPawnSignal>
+						</nodeIfChosenPawnSignalUsed>
+					</node>
+				</li>
+				<li Class="QuestNode_End">
+					<inSignal>site.AllEnemiesDefeated</inSignal>
+					<outcome>Success</outcome>
+				</li>
+			</nodes>
+		</root>
+	</QuestScriptDef>
+  
+	<SitePartDef>
+		<defName>RH_TET_ChaosPortalSmall</defName>
+		<label>chaos portal</label>
+		<description>A group of chaos followers attempting to overrun the world with chaos beasts.</description>
+		<tags>
+			<li>RH_TET_ChaosPortalSmall</li>
+		</tags>
+	
+		<workerClass>TheEndTimes.SitePartWorker_ChaosPortalSmall</workerClass>
+		<siteTexture>World/WorldObjects/Sites/Outpost</siteTexture>
+		<expandingIconTexture>World/Quests/ChaosPortalSmall</expandingIconTexture>
+		<applyFactionColorToSiteTexture>false</applyFactionColorToSiteTexture>
+		<showFactionInInspectString>false</showFactionInInspectString>
+		<requiresFaction>false</requiresFaction>
+		<approachOrderString>Attack {0}</approachOrderString>
+		<approachingReportString>Attacking {0}</approachingReportString>
+		<arrivedLetter>There is a chaos portal in this area.</arrivedLetter>
+		<arrivedLetterDef>NegativeEvent</arrivedLetterDef>
+		<wantsThreatPoints>true</wantsThreatPoints>
+	</SitePartDef>
+
+	<GenStepDef>
+		<defName>RH_TET_ChaosPortalSmall</defName>
+		<linkWithSite>RH_TET_ChaosPortalSmall</linkWithSite>
+		<order>450</order>
+		<genStep Class="TheEndTimes.GenStep_ChaosPortalSmall"/>
+	</GenStepDef>
+
+</Defs>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TaleDef>
+		<defName>RH_TET_ChaosStorm</defName>
+		<label>chaos storm</label>
+		<taleClass>Tale_SinglePawn</taleClass>
+		<type>Volatile</type>
+		<baseInterest>50</baseInterest>
+		<rulePack>
+			<rulesStrings>
+				<li>tale_noun->chaos corruption settling over [pawn_nameShortDef]'s [community]</li>
+				<li>tale_noun->the atmosphere near [pawn_nameShortDef]'s [community] becoming corrupted</li>
+				<li>image->an ominous glowing sky, [circumstance_group]</li>
+				<li>image->the air becoming corrupted and [circumstance_group]</li>
+				<li>image->the ground glowing gently and [circumstance_group]</li>
+				<li>image->fields of dead plants [circumstance_group]</li>
+				<li>image->[quantity_adjphrase] graves [circumstance_group]</li>
+				<li>circumstance_phrase->with no life in sight</li>
+				<li>circumstance_phrase->pulsating with a chaotic glow</li>
+				<li>circumstance_phrase->arranged in a pattern that suggests an 8 pointed star</li>
+				<li>circumstance_phrase->waiting for the chaos storm to stop</li>
+				<li>desc_sentence->[pawn_nameShortDef] lies on the ground, [pawn_possessive] body twisted at an unusual angle.</li>
+				<li>desc_sentence->[pawn_nameShortDef] hides near a [terrainfeature], gazing out with a [angstyadjective] look.</li>
+				<li>desc_sentence->[pawn_nameShortDef] looks on in shock.</li>
+				<li>desc_sentence->[pawn_nameShortDef] rests quietly with a layer of sweat upon [pawn_possessive] face.</li>
+				<li>desc_sentence->[quantity_adjphrase] dead and mutated[animal]s litter the ground.</li>
+				<li>desc_sentence->[quantity_adjphrase] dying mutated [animal]s litter the ground.</li>
+				<li>desc_sentence->[quantity_adjphrase] [animal]s mill around uncertainly, baying incessantly.</li>
+			</rulesStrings>
+		</rulePack>
+	</TaleDef>
+  
+</Defs>

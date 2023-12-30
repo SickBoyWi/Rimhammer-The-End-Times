@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<SoundDef>
+		<defName>TET_Pawn_ChaosBeast_Roar</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>ChaosSpawn/TET_ChaosSpawnRoar</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>5</min>
+					<max>15</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9311765</min>
+					<max>1.045882</max>
+				</pitchRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+	<SoundDef>
+		<defName>RH_TET_ChaosPortalSpawn</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>ChaosPortal/RH_TET_ChaosPortalSpawn</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>20</min>
+					<max>20</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9311765</min>
+					<max>1.045882</max>
+				</pitchRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+	<SoundDef>
+		<defName>RH_TET_ChaosPortalAmbient</defName>
+		<sustain>True</sustain>
+		<context>MapOnly</context>
+		<eventNames/>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>ChaosPortal/RH_TET_ChaosPortalAmbient</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>21.7647</min>
+					<max>22.94118</max>
+				</volumeRange>
+				<distRange>
+					<min>10.88235</min>
+					<max>50.70592</max>
+				</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+   
+	<SoundDef>
+		<defName>RH_TET_Horse_Whinny</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Horse/RH_TET_HorseWhinny</clipPath>
+					</li>
+				</grains>
+				<volumeRange>14~18</volumeRange>
+				<pitchRange>0.9311765~1.045882</pitchRange>
+				<distRange>0~50.40025</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>RH_TET_Horse_Snort</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Horse/RH_TET_HorseSnort</clipPath>
+					</li>
+				</grains>
+				<volumeRange>14~18</volumeRange>
+				<pitchRange>0.9311765~1.045882</pitchRange>
+				<distRange>0~50.40025</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+ 
+	<SoundDef>
+		<defName>RH_TET_Jabberslythe_Call</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Jabberslythe/JabberslytheRoar</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>20</min>
+					<max>20</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9311765</min>
+					<max>1.045882</max>
+				</pitchRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+</Defs>

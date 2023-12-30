@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+
+		<mods>
+			<li>VGP Garden Resources</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="ExtractRawSteelLeaf"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="ExtractRawPlasteelLeaf"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="ExtractRawGoldLeaf"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="ExtractRawJadeLeaf"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="ExtractRawSilverLeaf"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="ExtractRawUraniumLeaf"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="ExtractBulkSteelLeaf"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="ExtractBulkPlasteelLeaf"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="ExtractbulkGoldLeaf"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="ExtractBulkRawJadeLeaf"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="ExtractBulkSilverLeaf"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="ExtractBulkUraniumLeaf"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+		
+	</Operation>
+
+</Patch>
+

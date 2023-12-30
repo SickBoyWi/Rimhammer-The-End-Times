@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThoughtDef>
+		<defName>RH_TET_ObservedChaosSpawn</defName>
+		<icon>Things/Mote/Thought/TET_ChaosSpawn</icon>
+		<showBubble>true</showBubble>
+		<thoughtClass>Thought_MemoryObservation</thoughtClass>
+		<durationDays>0.2</durationDays>
+		<stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+		<stackLimit>4</stackLimit>
+		<stages>
+			<li>
+				<label>observed chaos spawn</label>
+				<description>I've witnessed one of the most vile chaos abominations that I can conceive of. It was truly disturbing.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<ThoughtDef>
+		<defName>RH_TET_ObservedChaosSpawnDead</defName>
+		<icon>Things/Mote/Thought/TET_ChaosSpawnDead</icon>
+		<showBubble>true</showBubble>
+		<thoughtClass>Thought_MemoryObservation</thoughtClass>
+		<durationDays>0.2</durationDays>
+		<stackedEffectMultiplier>.25</stackedEffectMultiplier>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>observed dead chaos spawn</label>
+				<description>Some of the vile corruption in the world has been removed. That brings me some peace.</description>
+				<baseMoodEffect>1</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>AteChaosMeatDirect</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate raw chaos meat</label>
+				<description>I ate some corrupted meat. It was, possibly, the most disgusting yet delicious thing I've ever tasted.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>AteChaosMeatAsIngredient</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate cooked chaos meat</label>
+				<description>I ate a meal cooked from corrupted meat. It tasted amazing, but I feel rather unsettled.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>TH_TET_ColonistCorrupted</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/Thought/TET_ChaosSpawn</icon>
+		<durationDays>6</durationDays>
+		<stages>
+			<li>
+				<label>colonist mutated into chaos monster</label>
+				<description>A colonist succumbed to chaos, and mutated into a chaos spawn.</description>
+				<baseMoodEffect>-8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+  
+</Defs>

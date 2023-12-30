@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_MagicItems</defName>
+		<label>magic items</label>
+		<parent>Items</parent>
+	</ThingCategoryDef>
+
+</Defs>

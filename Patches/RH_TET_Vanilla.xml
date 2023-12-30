@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>//IncidentDef[defName = "Ambush"]/mtbDaysByBiome</xpath>
+		<value>
+			<RH_TET_ChaosWastes>20</RH_TET_ChaosWastes>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>
+			Defs/ThingDef[defName = "Campfire"]/comps/li[contains(@Class,'CompProperties_Refuelable')]/fuelFilter/thingDefs |
+			Defs/ThingDef[defName = "FueledStove"]/comps/li[contains(@Class,'CompProperties_Refuelable')]/fuelFilter/thingDefs |
+			Defs/ThingDef[defName = "FueledSmithy"]/comps/li[contains(@Class,'CompProperties_Refuelable')]/fuelFilter/thingDefs |
+			Defs/ThingDef[defName = "WoodFiredGenerator"]/comps/li[contains(@Class,'CompProperties_Refuelable')]/fuelFilter/thingDefs
+		</xpath>
+		<value>
+			<li>RH_TET_Coal</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "PsychiteTea"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Stove</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName = "Slave"]/defaultFactionType</xpath>
+		<value>
+			<defaultFactionType>TribeRough</defaultFactionType>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/RecipeDef[@Name = "CookMealBase"]/defaultIngredientFilter/disallowedThingDefs</xpath>
+		<value>
+			<li>Meat_RH_TET_ChaosSpawnRace</li>
+			
+			<!--<li>TET_ChaosMeat</li>-->
+			<li>RH_TET_CookedCure</li>
+			<li>RH_TET_CookedPickling</li>
+			<li>RH_TET_AnimalFat</li>
+			<li>RH_TET_JabberTounge</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/WorldObjectDef[defName = "Site"]/comps</xpath>
+		<value>
+			<li Class="TheEndTimes.WorldObjectCompProperties_DestroyBuildingQuestComp"/>
+			<li Class="TheEndTimes.WorldObjectCompProperties_DestroyJabberslytheQuestComp"/>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/StorytellerDef[defName = "Cassandra"]/comps</xpath>
+		<value>
+			<li Class="StorytellerCompProperties_SingleOnceFixed">
+				<fireAfterDaysPassed>20</fireAfterDaysPassed>
+				<incident>RH_TET_ChaosPortalGreatJourneyOffer</incident>
+				<allowedTargetTags>
+					<li>World</li>
+				</allowedTargetTags>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/StorytellerDef[defName = "Phoebe"]/comps</xpath>
+		<value>
+			<li Class="StorytellerCompProperties_SingleOnceFixed">
+				<fireAfterDaysPassed>20</fireAfterDaysPassed>
+				<incident>RH_TET_ChaosPortalGreatJourneyOffer</incident>
+				<allowedTargetTags>
+					<li>World</li>
+				</allowedTargetTags>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/StorytellerDef[defName = "Randy"]/comps</xpath>
+		<value>
+			<li Class="StorytellerCompProperties_SingleOnceFixed">
+				<fireAfterDaysPassed>20</fireAfterDaysPassed>
+				<incident>RH_TET_ChaosPortalGreatJourneyOffer</incident>
+				<allowedTargetTags>
+					<li>World</li>
+				</allowedTargetTags>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/TraderKindDef[defName = "Orbital_BulkGoods"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Coal</thingDef>
+				<countRange>
+					<min>200</min>
+					<max>500</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>RH_TET_Artifact</tradeTag>
+				<thingDefCountRange>
+					<min>2</min>
+					<max>2</max>
+				</thingDefCountRange>
+				<countRange>
+					<min>1</min>
+					<max>1</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>RH_TET_MagicApparel</tradeTag>
+				<thingDefCountRange>
+					<min>1</min>
+					<max>2</max>
+				</thingDefCountRange>
+				<countRange>
+					<min>1</min>
+					<max>1</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>RH_TET_MagicWeapon</tradeTag>
+				<thingDefCountRange>
+					<min>0</min>
+					<max>1</max>
+				</thingDefCountRange>
+				<countRange>
+					<min>1</min>
+					<max>1</max>
+				</countRange>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/TraderKindDef[defName = "Orbital_CombatSupplier"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Coal</thingDef>
+				<countRange>
+					<min>50</min>
+					<max>200</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>RH_TET_MagicApparel</tradeTag>
+				<thingDefCountRange>
+					<min>1</min>
+					<max>2</max>
+				</thingDefCountRange>
+				<countRange>
+					<min>1</min>
+					<max>1</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>RH_TET_MagicWeapon</tradeTag>
+				<thingDefCountRange>
+					<min>1</min>
+					<max>3</max>
+				</thingDefCountRange>
+				<countRange>
+					<min>1</min>
+					<max>1</max>
+				</countRange>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/TraderKindDef[defName = "Orbital_PirateMerchant"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Coal</thingDef>
+				<countRange>
+					<min>25</min>
+					<max>100</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>RH_TET_Artifact</tradeTag>
+				<thingDefCountRange>
+					<min>2</min>
+					<max>2</max>
+				</thingDefCountRange>
+				<countRange>
+					<min>1</min>
+					<max>1</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>RH_TET_MagicApparel</tradeTag>
+				<thingDefCountRange>
+					<min>1</min>
+					<max>3</max>
+				</thingDefCountRange>
+				<countRange>
+					<min>1</min>
+					<max>3</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>RH_TET_MagicWeapon</tradeTag>
+				<thingDefCountRange>
+					<min>1</min>
+					<max>2</max>
+				</thingDefCountRange>
+				<countRange>
+					<min>1</min>
+					<max>1</max>
+				</countRange>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/TraderKindDef[defName = "Orbital_Exotic"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Coal</thingDef>
+				<countRange>
+					<min>25</min>
+					<max>100</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>RH_TET_Artifact</tradeTag>
+				<thingDefCountRange>
+					<min>2</min>
+					<max>2</max>
+				</thingDefCountRange>
+				<countRange>
+					<min>1</min>
+					<max>1</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>RH_TET_MagicApparel</tradeTag>
+				<thingDefCountRange>
+					<min>1</min>
+					<max>3</max>
+				</thingDefCountRange>
+				<countRange>
+					<min>1</min>
+					<max>1</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>RH_TET_MagicWeapon</tradeTag>
+				<thingDefCountRange>
+					<min>1</min>
+					<max>3</max>
+				</thingDefCountRange>
+				<countRange>
+					<min>1</min>
+					<max>1</max>
+				</countRange>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/TraderKindDef[defName = "Base_Neolithic_Standard"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Coal</thingDef>
+				<countRange>
+					<min>100</min>
+					<max>500</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>RH_TET_Artifact</tradeTag>
+				<thingDefCountRange>
+					<min>2</min>
+					<max>2</max>
+				</thingDefCountRange>
+				<countRange>
+					<min>1</min>
+					<max>1</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>RH_TET_MagicApparel</tradeTag>
+				<thingDefCountRange>
+					<min>0</min>
+					<max>1</max>
+				</thingDefCountRange>
+				<countRange>
+					<min>1</min>
+					<max>1</max>
+				</countRange>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/TraderKindDef[defName = "Base_Outlander_Standard"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Coal</thingDef>
+				<countRange>
+					<min>100</min>
+					<max>500</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>RH_TET_Artifact</tradeTag>
+				<thingDefCountRange>
+					<min>2</min>
+					<max>2</max>
+				</thingDefCountRange>
+				<countRange>
+					<min>1</min>
+					<max>1</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>RH_TET_MagicApparel</tradeTag>
+				<thingDefCountRange>
+					<min>0</min>
+					<max>2</max>
+				</thingDefCountRange>
+				<countRange>
+					<min>1</min>
+					<max>1</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>RH_TET_MagicWeapon</tradeTag>
+				<thingDefCountRange>
+					<min>0</min>
+					<max>1</max>
+				</thingDefCountRange>
+				<countRange>
+					<min>1</min>
+					<max>1</max>
+				</countRange>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/QuestScriptDef[defName = "Util_GenerateSite"]/root/singleSitePartRules/rulesStrings</xpath>
+		<value>
+			<li>root(priority=1,sitePart==RH_TET_ChaosPortalSmall)->there's a chaos portal, and those that are being spawned from and defending it here</li>
+			<li>root(priority=1,sitePart==RH_TET_JabberslytheLair)->there's the lair of a horrifying and corrupt creature here</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimhammer - The End Times - Empire</li>
+			<li>Rimhammer - The End Times - Dwarfs</li>
+		</mods>
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>//WorkGiverDef[defName = "RH_TET_DoSmithing"]/fixedBillGiverDefs</xpath>
+					<value>
+						<li>RH_TET_TableSmithy</li>
+					</value>
+				</li>
+			</operations>
+		</nomatch>
+	</Operation>
+
+
+</Patch>
+

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_PreservedFoods</defName>
+		<label>preserved foods</label>
+		<parent>FoodRaw</parent>
+		<iconPath>UI/Icons/ThingCategories/AnimalProductRaw</iconPath>
+	</ThingCategoryDef>
+	  
+</Defs>

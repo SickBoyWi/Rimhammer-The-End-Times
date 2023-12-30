@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_PicklingCrock</defName>
+		<label>Pickling Crock</label>
+		<description>A stone crock for pickling meats and vegetables.</description>
+		<thingClass>TheEndTimes.Building_PicklingCrock</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Production/RH_TET_PicklingCrock</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<damageData>
+				<rect>(0.05,0.1,0.9,0.9)</rect>
+			</damageData>
+			<shadowData>
+				<volume>(0.75, 0.35, 0.33)</volume>
+			</shadowData>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<uiIconPath>UI/Icons/Food/RH_TET_PicklingCrock_MenuIcon</uiIconPath>
+		<fillPercent>0.45</fillPercent>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+		<pathCost>60</pathCost>
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<statBases>
+			<WorkToBuild>600</WorkToBuild>
+			<Mass>10</Mass>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.1</Flammability>
+		</statBases>
+		<costList>
+			<WoodLog>10</WoodLog>
+		</costList>
+		<costStuffCount>20</costStuffCount>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<comps>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>-1</minSafeTemperature>
+				<maxSafeTemperature>32</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+			</li>
+		</comps>
+		<tickerType>Rare</tickerType>
+		<rotatable>false</rotatable>
+		<designationCategory>Production</designationCategory>
+		<researchPrerequisites>
+			<li>RH_TET_FoodPreservation</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_CuringPot</defName>
+		<label>Curing Pot</label>
+		<description>A sealed pot for curing meat.</description>
+		<thingClass>TheEndTimes.Building_CuringPot</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Production/RH_TET_CuringPot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<damageData>
+				<rect>(0.05,0.1,0.9,0.9)</rect>
+			</damageData>
+			<shadowData>
+				<volume>(0.75, 0.35, 0.33)</volume>
+			</shadowData>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<uiIconPath>UI/Icons/Food/RH_TET_CuringPot_MenuIcon</uiIconPath>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.45</fillPercent>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+		<pathCost>60</pathCost>
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<statBases>
+			<WorkToBuild>600</WorkToBuild>
+			<Mass>7.5</Mass>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>30</costStuffCount>
+		<comps>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>-1</minSafeTemperature>
+				<maxSafeTemperature>32</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+			</li>
+		</comps>
+		<tickerType>Rare</tickerType>
+		<rotatable>false</rotatable>
+		<designationCategory>Production</designationCategory>
+		<researchPrerequisites>
+			<li>RH_TET_FoodPreservation</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_CuringCabinet</defName>
+		<label>Curing Cabinet</label>
+		<description>A cabinet for drying cured meat.</description>
+		<thingClass>TheEndTimes.Building_CuringCabinet</thingClass>
+		<size>(2,1)</size>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Production/RH_TET_CuringCabinet</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>3</drawSize>
+		</graphicData>
+		<uiIconScale>0.75</uiIconScale>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.9</fillPercent>
+		<pathCost>90</pathCost>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<statBases>
+			<WorkToBuild>1100</WorkToBuild>
+			<Mass>20</Mass>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
+		<costStuffCount>50</costStuffCount>
+		<comps>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>-1</minSafeTemperature>
+				<maxSafeTemperature>32</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+			</li>
+		</comps>
+		<tickerType>Rare</tickerType>
+		<rotatable>true</rotatable>
+		<designationCategory>Production</designationCategory>
+		<researchPrerequisites>
+			<li>RH_TET_FoodPreservation</li>
+		</researchPrerequisites>
+	</ThingDef>
+  
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_PicklingCrockBulk</defName>
+		<label>Bulk Pickling Vat</label>
+		<description>A huge stone crock for pickling meats and vegetables, intended to do large quantities at one time.</description>
+		<thingClass>TheEndTimes.Building_PicklingCrockBulk</thingClass>
+		<size>(2,2)</size>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Production/RH_TET_PicklingCrockBulk</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2.1, 2.1)</drawSize>
+			<damageData>
+				<rect>(0.05,0.1,0.9,0.9)</rect>
+			</damageData>
+			<shadowData>
+				<volume>(0.75, 0.35, 0.33)</volume>
+			</shadowData>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<uiIconPath>UI/Icons/Food/RH_TET_PicklingCrockBulk_MenuIcon</uiIconPath>
+		<fillPercent>0.45</fillPercent>
+		<pathCost>60</pathCost>
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<statBases>
+			<WorkToBuild>2500</WorkToBuild>
+			<Mass>40</Mass>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Flammability>0.1</Flammability>
+		</statBases>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<costList>
+			<WoodLog>50</WoodLog>
+		</costList>
+		<costStuffCount>120</costStuffCount>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<comps>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>-1</minSafeTemperature>
+				<maxSafeTemperature>32</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+			</li>
+		</comps>
+		<tickerType>Rare</tickerType>
+		<rotatable>false</rotatable>
+		<designationCategory>Production</designationCategory>
+		<researchPrerequisites>
+			<li>RH_TET_FoodPreservationBulk</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_CuringPotBulk</defName>
+		<label>Bulk Curing Vat</label>
+		<description>A massive sealed pot for curing meat. Intended for large quantities at once.</description>
+		<thingClass>TheEndTimes.Building_CuringPotBulk</thingClass>
+		<size>(2,2)</size>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Production/RH_TET_CuringPotBulk</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2.1, 2.1)</drawSize>
+			<damageData>
+				<rect>(0.05,0.1,0.9,0.9)</rect>
+			</damageData>
+			<shadowData>
+				<volume>(0.75, 0.35, 0.33)</volume>
+			</shadowData>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<uiIconPath>UI/Icons/Food/RH_TET_CuringPotBulk_MenuIcon</uiIconPath>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.45</fillPercent>
+		<pathCost>60</pathCost>
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<statBases>
+			<WorkToBuild>2500</WorkToBuild>
+			<Mass>35</Mass>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>150</costStuffCount>
+		<comps>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>-1</minSafeTemperature>
+				<maxSafeTemperature>32</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+			</li>
+		</comps>
+		<tickerType>Rare</tickerType>
+		<rotatable>false</rotatable>
+		<designationCategory>Production</designationCategory>
+		<researchPrerequisites>
+			<li>RH_TET_FoodPreservationBulk</li>
+		</researchPrerequisites>
+	</ThingDef>
+  
+</Defs>

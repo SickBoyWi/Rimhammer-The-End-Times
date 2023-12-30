@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/ThingDef[defName = "WDCoal"]</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<order>Append</order>
+				<xpath>
+			Defs/ThingDef[defName = "RH_TET_Brazier"]/comps/li[contains(@Class,'CompProperties_Refuelable')]/fuelFilter/thingDefs |
+			Defs/ThingDef[defName = "RH_TET_TableSmithy"]/comps/li[contains(@Class,'CompProperties_Refuelable')]/fuelFilter/thingDefs |
+			Defs/ThingDef[defName = "RH_TET_Stove"]/comps/li[contains(@Class,'CompProperties_Refuelable')]/fuelFilter/thingDefs
+				</xpath>
+				<value>
+					<li>WDCoal</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/ThingDef[defName = "Coal"]</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<order>Append</order>
+				<xpath>
+			Defs/ThingDef[defName = "RH_TET_Brazier"]/comps/li[contains(@Class,'CompProperties_Refuelable')]/fuelFilter/thingDefs |
+			Defs/ThingDef[defName = "RH_TET_TableSmithy"]/comps/li[contains(@Class,'CompProperties_Refuelable')]/fuelFilter/thingDefs |
+			Defs/ThingDef[defName = "RH_TET_Stove"]/comps/li[contains(@Class,'CompProperties_Refuelable')]/fuelFilter/thingDefs
+				</xpath>
+				<value>
+					<li>Coal</li>
+					<li>Charcoal</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>
+

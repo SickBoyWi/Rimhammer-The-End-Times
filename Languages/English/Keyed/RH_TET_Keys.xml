@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RH_TET_Title>Rimhammer, The End Times</RH_TET_Title>
+	<RH_TET_FullDate>{0} of {1}, {2}, The End Times</RH_TET_FullDate>
+	<RH_TET_DateReadout>{0} of {1}, {2}, The End Times</RH_TET_DateReadout>
+
+	<RH_TET_PawnSuccumbedToChaos_Berserk>{0} has succumbed to chaos corruption, and gone berserk.</RH_TET_PawnSuccumbedToChaos_Berserk>
+	<RH_TET_PawnWildSuccumbedToChaos_Berserk>{0} has succumbed to chaos corruption, and gone berserk.</RH_TET_PawnWildSuccumbedToChaos_Berserk>
+
+	<RH_TET_PawnSuccumbedToChaos_Spawn>{0} has been fully corrupted by chaos, and has turned into a spawn.</RH_TET_PawnSuccumbedToChaos_Spawn>
+	<RH_TET_PawnWildSuccumbedToChaos_Spawn>{0} has been fully corrupted by chaos, and has turned into a spawn.</RH_TET_PawnWildSuccumbedToChaos_Spawn>
+
+	<RH_TET_PlaceWorker_OnTopOfWalls>Must be placed on a wall.</RH_TET_PlaceWorker_OnTopOfWalls>
+
+	<RH_TET_ContainsPickling>Contains {0} / {1} pickling.</RH_TET_ContainsPickling>
+	<RH_TET_ContainsPickledFood>Contains {0} / {1} pickled food.</RH_TET_ContainsPickledFood>
+	<RH_TET_NoPickling>need pickling</RH_TET_NoPickling>
+	<RH_TET_Pickled>pickled</RH_TET_Pickled>
+	<RH_TET_PicklingProgress>{0} pickled, {1} time remaining.</RH_TET_PicklingProgress>
+	<RH_TET_PicklingCrockOutOfIdealTemperature>Outside ideal temperature, current pickling rate {0}.</RH_TET_PicklingCrockOutOfIdealTemperature>
+	<RH_TET_IdealPicklingTemperature>Ideal pickling temperature</RH_TET_IdealPicklingTemperature>
+		
+	<RH_TET_ContainsCuring>Contains {0} / {1} curing meat.</RH_TET_ContainsCuring>
+	<RH_TET_ContainsCuredFood>Contains {0} / {1} cured meat.</RH_TET_ContainsCuredFood>
+	<RH_TET_NoCure>need cure</RH_TET_NoCure>
+	<RH_TET_Cured>cured</RH_TET_Cured>
+	<RH_TET_CuringProgress>{0} cured, {1} time remaining.</RH_TET_CuringProgress>
+	<RH_TET_CuringPotOutOfIdealTemperature>Outside ideal temperature, current curing rate {0}.</RH_TET_CuringPotOutOfIdealTemperature>
+	<RH_TET_IdealCuringTemperature>Ideal curing temperature</RH_TET_IdealCuringTemperature>
+
+	<RH_TET_ContainsDryingCuring>Contains {0} / {1} drying cured meat.</RH_TET_ContainsDryingCuring>
+	<RH_TET_ContainsDryingCuredFood>Contains {0} / {1} dried cured meat.</RH_TET_ContainsDryingCuredFood>
+	<RH_TET_NoCuredMeat>need cured meat</RH_TET_NoCuredMeat>
+	<RH_TET_Dried>dried cured</RH_TET_Dried>
+	<RH_TET_DryingProgress>{0} dried, {1} time remaining.</RH_TET_DryingProgress>
+	<RH_TET_CuringCabinetOutOfIdealTemperature>Outside ideal temperature, current drying rate {0}.</RH_TET_CuringCabinetOutOfIdealTemperature>
+	<RH_TET_IdealDryingTemperature>Ideal drying temperature</RH_TET_IdealDryingTemperature>
+
+	<RH_TET_WarnBoth>Must be placed on a wall, facing an open tile.</RH_TET_WarnBoth>
+	<RH_TET_WarnNeedWall>Must be placed on a wall.</RH_TET_WarnNeedWall>
+	<RH_TET_WarnBlocked>Must be facing an open tile.</RH_TET_WarnBlocked>
+	<RH_TET_DestroyedBlocked>Light destroyed because it was blocked.</RH_TET_DestroyedBlocked>
+	<RH_TET_DestroyedWall>Light destroyed because wall was destroyed.</RH_TET_DestroyedWall>
+
+	<RH_TET_ChaosWastes>Chaos Wastes Global Generation Settings</RH_TET_ChaosWastes>
+	<RH_TET_Default>Default</RH_TET_Default>
+	<RH_TET_Include_ChaosWastes>Alter globe to include chaos wastes at poles?</RH_TET_Include_ChaosWastes>
+	<RH_TET_ChaosWastes_Latitude>Start Chaos Wastes Latitude (Note: The equator is 0 degrees, the poles are at 90 degrees.)</RH_TET_ChaosWastes_Latitude>
+	<RH_TET_ChaosWastes_Latitude_RandomVariant>Chaos Wastes Latitude Random Variation Amount</RH_TET_ChaosWastes_Latitude_RandomVariant>
+	
+	<RH_TET_Reason_ChaosTaintBerserk>Chaos corruption</RH_TET_Reason_ChaosTaintBerserk>
+	
+	<RH_TET_OtherSettings>Other Rimhammer Settings</RH_TET_OtherSettings>
+	<RH_TET_Include_Uranium>Include uranium in the game?</RH_TET_Include_Uranium>
+	<RH_TET_Include_Plasteel>Include plasteel in the game?</RH_TET_Include_Plasteel>
+	<RH_TET_Include_UraniumMessage>(Note: Changing these settings will require a game restart in order for it to take effect.</RH_TET_Include_UraniumMessage>
+	
+	<!-- Quest completed -->
+	<RH_TET_LetterLabelDestroyPortalQuestCompleted>Portal destroyed</RH_TET_LetterLabelDestroyPortalQuestCompleted>
+	<RH_TET_LetterDestroyPortalQuestCompleted>You have destroyed the chaos portal!\n\nThe payment from {0} has arrived, and faction relations have improved by {1}.</RH_TET_LetterDestroyPortalQuestCompleted>
+	<RH_TET_LetterLabelDestroyJabberslytheQuestCompleted>Jabberslythe destroyed</RH_TET_LetterLabelDestroyJabberslytheQuestCompleted>
+	<RH_TET_LetterDestroyJabberslytheQuestCompleted>You have destroyed the foul jabberslythe in its lair!\n\nMake sure that you collect its treasures before leaving.</RH_TET_LetterDestroyJabberslytheQuestCompleted>
+	<RH_TET_DestroyJabberslytheQuestInspectString>Great rewards can be gained by destroying the foul jabberslythe in its lair.</RH_TET_DestroyJabberslytheQuestInspectString>
+
+	<!-- Journey-related -->
+	<RH_TET_ChaosPortalGreat_FoundLabel>Great chaos portal found</RH_TET_ChaosPortalGreat_FoundLabel>
+	<RH_TET_ChaosPortalGreat_Found>You've reached the location of the great chaos portal, as described in the messege you received.\n\nThe chaos energies are surging, and the portal has started to open. It will begin disgorging chaos beasts.\n\nBe warned that it will be a difficult fight.\n\nYou will be assaulted with an intensity you've never seen. Stay strong! The fate of the world is in your hands.</RH_TET_ChaosPortalGreat_Found>
+	<RH_TET_VisitChaosPortalGreat>Approach great chaos portal</RH_TET_VisitChaosPortalGreat>
+	<RH_TET_VisitingChaosPortalGreat>Approaching great chaos portal</RH_TET_VisitingChaosPortalGreat>
+	<RH_TET_GameOverChaosPortalGreatDestroyed>Congratulations! You've destroyed the great chaos portal. Well done! The old world will be safe for now, and Sigmar will have to wait a little longer before his new age rises.\n\nThis mod was developed by Johnny Hastings (@SickBoyWI). Special thanks to @Dino's Bar and Grill and @Rebelrot for the fantastic artwork they generously donated their time and skills for that went into this mod; it made up for my lack of graphics skills, and made the Rimhammer - The End Times mods that much more great.\n\nThank you for playing.\n\nYou're free to call it a win for now, or keep playing and see what else happens in the world. If that's the case, hit the escape key to return to the game.</RH_TET_GameOverChaosPortalGreatDestroyed>
+  
+	<RH_TET_MessageTechChunkFound>Some abandonded technology has been found nearby. You can deconstruct them to yield resources.</RH_TET_MessageTechChunkFound>
+  
+</LanguageData>

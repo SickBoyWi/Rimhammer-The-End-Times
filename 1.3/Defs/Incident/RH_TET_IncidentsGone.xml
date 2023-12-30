@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--
+  <IncidentCategoryDef>
+    <defName>RH_TET_AbandondedTechnologyFind</defName>
+  </IncidentCategoryDef>
+-->
+
+  <IncidentDef>
+    <defName>RefugeePodCrash</defName>
+    <label>transport pod crash</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_GiveQuest</workerClass>
+    <questScriptDef>RefugeePodCrash</questScriptDef>
+    <baseChance>0</baseChance>
+    <populationEffect>IncreaseMedium</populationEffect>
+    <requireColonistsPresent>True</requireColonistsPresent>
+  </IncidentDef>
+  
+</Defs>

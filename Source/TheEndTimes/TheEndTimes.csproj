@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C53833E-4687-4D26-ABB6-52A112239B6D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TheEndTimes</RootNamespace>
+    <AssemblyName>TheEndTimes</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\1.4\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="HugsLib">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\818773962\v1.3\Assemblies\HugsLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Events\StorytellerComp_AbandondedTechFound.cs" />
+    <Compile Include="Events\StorytellerCompProperties_TechChunkFound.cs" />
+    <Compile Include="Events\IncidentWorker_AbandondedTechnologyFind.cs" />
+    <Compile Include="PlaceWorker\PlaceWorker_Candle.cs" />
+    <Compile Include="Building\StaticWallSconceStuff.cs" />
+    <Compile Include="Building\WallSconceGlower.cs" />
+    <Compile Include="Building\Building_WallSconce.cs" />
+    <Compile Include="PlaceWorker\PlaceWorker_OnTopOfWalls.cs" />
+    <Compile Include="FoodPreservation\Building_CuringPotBulk.cs" />
+    <Compile Include="FoodPreservation\Building_PicklingCrockBulk.cs" />
+    <Compile Include="FoodPreservation\JobDriver_PutCureIntoCuringPotBulk.cs" />
+    <Compile Include="FoodPreservation\JobDriver_PutPicklingInPickleCrockBulk.cs" />
+    <Compile Include="FoodPreservation\JobDriver_TakeCuredMeatFromCuringPotBulk.cs" />
+    <Compile Include="FoodPreservation\JobDriver_TakePickledFoodFromPicklingCrockBulk.cs" />
+    <Compile Include="FoodPreservation\WorkGiver_PutCureIntoCuringPotBulk.cs" />
+    <Compile Include="FoodPreservation\WorkGiver_PutPicklingInPickleCrockBulk.cs" />
+    <Compile Include="FoodPreservation\WorkGiver_TakeCuredMeatFromCuringPotBulk.cs" />
+    <Compile Include="FoodPreservation\WorkGiver_TakePickledFoodFromPicklingCrockBulk.cs" />
+    <Compile Include="Quest_ChaosPortalSmall\HarmonyPatches_ChaosPortal.cs" />
+    <Compile Include="Quest_ChaosPortalSmall\SitePartWorker_ChaosPortalSmall.cs" />
+    <Compile Include="Quest_Generic\QuestNode_GetSiteTileFlatHills.cs" />
+    <Compile Include="Quest_Generic\QuestNode_GetSiteTileMountainCave.cs" />
+    <Compile Include="Quest_JabberslytheLair\QuestNode_GetDefaultSitePartsParamsChaos.cs" />
+    <Compile Include="Quest_JabberslytheLair\JabberslytheLairCellFinder.cs" />
+    <Compile Include="Quest_JabberslytheLair\SitePartWorker_JabberslytheLair.cs" />
+    <Compile Include="Quest_Victory_ChaosPortalGreat\CaravanArrivalAction_VisitChaosPortalGreat.cs" />
+    <Compile Include="Quest_Victory_ChaosPortalGreat\ChaosPortalGreatComp.cs" />
+    <Compile Include="Quest_Victory_ChaosPortalGreat\GenStep_ChaosPortalGreat.cs" />
+    <Compile Include="Quest_Victory_ChaosPortalGreat\RH_TET_GameVictoryUtility.cs" />
+    <Compile Include="Quest_Victory_ChaosPortalGreat\StorytellerComp_ChaosPortalGreatJourneyOffer.cs" />
+    <Compile Include="Quest_Victory_ChaosPortalGreat\StorytellerCompProperties_ChaosPortalGreatJourneyOffer.cs" />
+    <Compile Include="Quest_Victory_ChaosPortalGreat\ChaosPortalGreat.cs" />
+    <Compile Include="Quest_Victory_ChaosPortalGreat\IncidentWorker_ChaosPortalGreat.cs" />
+    <Compile Include="Quest_Victory_ChaosPortalGreat\WorldObjectCompProperties_ChaosPortalGreat.cs" />
+    <Compile Include="Quest_ChaosPortalSmall\WorldObjectCompProperties_DestroyBuildingQuestComp.cs" />
+    <Compile Include="Quest_ChaosPortalSmall\DestroyPortalQuestComp.cs" />
+    <Compile Include="Quest_ChaosPortalSmall\ChaosPortalUtility.cs" />
+    <Compile Include="Quest_ChaosPortalSmall\ChaosPortalSmall.cs" />
+    <Compile Include="Quest_ChaosPortalSmall\GenStep_ChaosPortalSmall.cs" />
+    <Compile Include="ChaosWastesBiome\Harmony_Ingested.cs" />
+    <Compile Include="ChaosWastesBiome\ChaosSpawnCorpse_ThingClassUpdater.cs" />
+    <Compile Include="ChaosWastesBiome\ChaosSpawnCorpse.cs" />
+    <Compile Include="ChaosWastesBiome\ChaosSpawn.cs" />
+    <Compile Include="ChaosWastesBiome\ChaosTaintWorkerUtility.cs" />
+    <Compile Include="ChaosWastesBiome\HediffDefOf.cs" />
+    <Compile Include="ChaosWastesBiome\GameCondition_ChaosStorm.cs" />
+    <Compile Include="ChaosWastesBiome\BiomeWorker.cs" />
+    <Compile Include="Comps\CompStoveRefuelable.cs" />
+    <Compile Include="Building\Building_Stove.cs" />
+    <Compile Include="FoodPreservation\Building_CuringCabinet.cs" />
+    <Compile Include="FoodPreservation\Building_CuringPot.cs" />
+    <Compile Include="FoodPreservation\Building_PicklingCrock.cs" />
+    <Compile Include="FoodPreservation\JobDriver_PutCuredMeatIntoCuringCabinet.cs" />
+    <Compile Include="FoodPreservation\JobDriver_PutCureIntoCuringPot.cs" />
+    <Compile Include="FoodPreservation\JobDriver_TakeDriedCuredMeatFromCuringCabinet.cs" />
+    <Compile Include="FoodPreservation\JobDriver_TakeCuredMeatFromCuringPot.cs" />
+    <Compile Include="FoodPreservation\JobDriver_TakePickledFoodFromPicklingCrock.cs" />
+    <Compile Include="FoodPreservation\JobDriver_PutPicklingInPickleCrock.cs" />
+    <Compile Include="FoodPreservation\WorkGiver_PutCuredMeatIntoCuringCabinet.cs" />
+    <Compile Include="FoodPreservation\WorkGiver_PutCureIntoCuringPot.cs" />
+    <Compile Include="FoodPreservation\WorkGiver_PutPicklingInPickleCrock.cs" />
+    <Compile Include="FoodPreservation\WorkGiver_TakeDriedCuredMeatFromCuringCabinet.cs" />
+    <Compile Include="FoodPreservation\WorkGiver_TakeCuredMeatFromCuringPot.cs" />
+    <Compile Include="FoodPreservation\WorkGiver_TakePickledFoodFromPicklingCrock.cs" />
+    <Compile Include="Quest_JabberslytheLair\DestroyJabberslytheQuestComp.cs" />
+    <Compile Include="Quest_JabberslytheLair\GenStep_JabberslytheLair.cs" />
+    <Compile Include="Quest_JabberslytheLair\SymbolResolver_CorpseMaker.cs" />
+    <Compile Include="Quest_JabberslytheLair\Jabberslythe.cs" />
+    <Compile Include="Quest_JabberslytheLair\WorldObjectCompProperties_DestroyJabberslytheQuestComp.cs" />
+    <Compile Include="Comps\CompFireOverlayRotatable.cs" />
+    <Compile Include="Comps\CompProperties_FireOverlayRotatable.cs" />
+    <Compile Include="Building\GraphicRotatable.cs" />
+    <Compile Include="TheEndTimesMod.cs" />
+    <Compile Include="PatchesAndStartUpStuff\OnStartup.cs" />
+    <Compile Include="PlaceWorker\PlaceWorker_CeilingBuilding.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PatchesAndStartUpStuff\PatchesHarmony.cs" />
+    <Compile Include="Settings\Settings.cs" />
+    <Compile Include="TheEndTimesDefOf.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

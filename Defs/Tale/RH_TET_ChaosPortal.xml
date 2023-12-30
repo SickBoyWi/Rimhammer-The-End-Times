@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TaleDef>
+		<defName>RH_TET_ChaosPortalGreatJourneyOffer</defName>
+		<label>great chaos portal</label>
+		<taleClass>Tale_SinglePawn</taleClass>
+		<type>Volatile</type>
+		<baseInterest>20</baseInterest>
+		<rulePack>
+			<rulesStrings>
+				<li>tale_noun->[PAWN_nameDef] receiving a message from an old friend</li>
+				<li>tale_noun->an opportunity arriving for [PAWN_nameDef]'s [Community]</li>
+				<li>image->[PAWN_nameDef] opening a letter delivered by [delivery_method] while [circumstance_group]</li>
+				<li>image->[PAWN_nameDef] reading a stone slate delivered by [delivery_method] while [circumstance_group]</li>
+				<li>image->[PAWN_nameDef] unrolling a scroll delivered by [delivery_method] while [circumstance_group]</li>
+				<li>image->[PAWN_nameDef] receiving a message from [transmission_source] while [circumstance_group]</li>
+				<li>delivery_method->a [Animal]</li>
+				<li>delivery_method->a [PersonJob]</li>
+				<li>delivery_method->[Quantity_adjphrase] [Animal]s</li>
+				<li>transmission_source->an ancient magical communication device</li>
+				<li>transmission_source->a messenger bird</li>
+				<li>circumstance_phrase->standing alone near a [TerrainFeature]</li>
+				<li>circumstance_phrase->exploring a [TerrainFeature]</li>
+				<li>circumstance_phrase->tending crops</li>
+				<li>circumstance_phrase->a [Animal] wanders past</li>
+				<li>circumstance_phrase->playing [Game]</li>
+				<li>desc_sentence->[Quantity_adjphrase] [Animal]s wander nearby, unaware.</li>
+				<li>desc_sentence->As [PAWN_pronoun] reads, [PAWN_pronoun] starts [VerbFriendly].</li>
+				<li>desc_sentence->A spectral [PersonJob] watches from the clouds.</li>
+				<li>desc_sentence->[PAWN_nameDef] sits near a [TerrainFeature].</li>
+				<li>desc_sentence->A [Community] is visible in the far distance.</li>
+				<li>desc_sentence->An ancestor statue is visible in the far distance.</li>
+			</rulesStrings>
+		</rulePack>
+	</TaleDef>
+
+	<TaleDef>
+		<defName>RH_TET_ChaosPortalGreatDestroyed</defName>
+		<label>great chaos portal destroyed</label>
+		<taleClass>Tale_SinglePawn</taleClass>
+		<type>Volatile</type>
+		<baseInterest>50</baseInterest>
+		<rulePack>
+			<rulesStrings>
+				<li>tale_noun->[PAWN_nameDef]'s caravan defeating a horde of chaos abominations</li>
+				<li>image->[PAWN_nameFull] running towards a [Enemy], [circumstance_group]</li>
+				<li>image->[PAWN_nameFull] wielding a [Weapon], [circumstance_group]</li>
+				<li>image->[PAWN_nameFull] swinging a [Weapon], [circumstance_group]</li>
+				<li>image->[PAWN_nameFull] standing as tall as a building, [circumstance_group]</li>
+				<li>circumstance_phrase->wearing a [AdjectiveBadass] look in [PAWN_possessive] eyes</li>
+				<li>circumstance_phrase->wearing a [AdjectiveAngsty] look in [PAWN_possessive] eyes</li>
+				<li>circumstance_phrase->roaring in victory</li>
+				<li>circumstance_phrase->covered in [Gore]</li>
+				<li>desc_sentence->[Quantity_adjphrase] [Enemy]s cower from the assault.</li>
+				<li>desc_sentence->[Quantity_adjphrase] [Enemy]s flee the area.</li>
+				<li>desc_sentence->[Quantity_adjphrase] [Enemy]s are visibly wounded.</li>
+				<li>desc_sentence->A [Community] burns in the distance.</li>
+				<li>desc_sentence->A [Community] smokes in the distance.</li>
+				<li>desc_sentence->The ground is coated in [Gore].</li>
+				<li>desc_sentence->[Quantity_adjphrase] [PersonJob]s flee the area.</li>
+				<li>desc_sentence->[Quantity_adjphrase] [Animal]s flee the area.</li>
+			</rulesStrings>
+		</rulePack>
+	</TaleDef>
+</Defs>

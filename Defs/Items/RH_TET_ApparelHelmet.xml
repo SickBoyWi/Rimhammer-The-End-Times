@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+	<ThingDef ParentName="ArmorHelmetMakeableBase">
+		<defName>RH_TET_Helmet_Low</defName>
+		<label>basic helmet</label>
+		<description>Provides protection for the upper head. Don't go into battle without one!</description>
+		<techLevel>Medieval</techLevel>
+		<recipeMaker>
+			<researchPrerequisite>PlateArmor</researchPrerequisite>
+			<unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>3</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Item/Apparel/RH_TET_HelmSimple</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>55</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<statBases>
+			<WorkToMake>7000</WorkToMake>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Mass>2.2</Mass>
+			<StuffEffectMultiplierArmor>0.68</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.25</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.15</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>3</EquipDelay>
+		</statBases>
+		<generateCommonality>2</generateCommonality>
+		<apparel>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Item/Apparel/RH_TET_HelmSimple</wornGraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li>RH_TET_Armor_Low</li>
+			</tags>
+		</apparel>
+		<tradeTags>
+			<li>RH_TET_Apparel</li>
+		</tradeTags>
+	</ThingDef>
+
+</Defs>

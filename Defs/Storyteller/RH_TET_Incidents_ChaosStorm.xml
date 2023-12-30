@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<IncidentDef>
+		<defName>RH_TET_ChaosStorm</defName>
+		<label>chaos storm</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<!-- TODO Consider restricting to biome. Not likely though.
+		<allowedBiomes>
+		  <li>RH_TET_ChaosWastes</li>
+		</allowedBiomes>
+		-->
+		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<gameCondition>RH_TET_ChaosStorm</gameCondition>
+		<letterLabel>Chaos storm</letterLabel>
+		<letterDef>ThreatSmall</letterDef>
+		<baseChance>0.15</baseChance>
+		<earliestDay>15</earliestDay>
+		<minRefireDays>120</minRefireDays>
+		<minDifficulty>2</minDifficulty>
+		<durationDays>2.5~10.5</durationDays>
+		<tale>RH_TET_ChaosStorm</tale>
+	</IncidentDef>
+
+</Defs>

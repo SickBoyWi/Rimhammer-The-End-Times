@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<GameConditionDef>
+		<defName>RH_TET_ChaosStorm</defName>
+		<conditionClass>TheEndTimes.GameCondition_ChaosStorm</conditionClass>
+		<label>chaos storm</label>
+		<description>A mighty chaos storm has begun, it is raining the vile corruption of chaos upon the land. Those caught out in the storm will be slowly tainted, causing health issues, berserk rages, and possibly death (or worse...).</description>
+		<descriptionFuture>A chaos storm will ravage the area for a while, enraging and killing outdoor plant and animal life</descriptionFuture>
+		<endMessage>The chaos storm seems to have abated, for now...</endMessage>
+		<letterText>The power of chaos is in ascendance and has caused a mighty chaos storm to begin; it is raining the vile corruption of chaos upon the land.\n\nThose caught out in the storm will be slowly tainted, causing health issues, berserk rages, and possibly death (or worse...).\n\nIt could last for days, it could last for over a season, or it could last forever.</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<canBePermanent>true</canBePermanent>
+	</GameConditionDef>
+   
+</Defs>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<LifeStageDef>
+		<defName>RH_TET_Young</defName>
+		<label>young</label>
+		<voxPitch>1.6</voxPitch>
+		<voxVolume>0.8</voxVolume>
+		<bodySizeFactor>0.50</bodySizeFactor>
+		<healthScaleFactor>0.50</healthScaleFactor>
+		<hungerRateFactor>1.2</hungerRateFactor>
+		<marketValueFactor>0.4</marketValueFactor>
+		<statFactors>
+			<MoveSpeed>0.75</MoveSpeed>
+		</statFactors>
+	</LifeStageDef>
+
+	<LifeStageDef>
+		<defName>RH_TET_Grown</defName>
+		<label>fully grown</label>
+		<visible>false</visible>
+		<reproductive>true</reproductive>
+		<hungerRateFactor>1.6</hungerRateFactor>
+	</LifeStageDef>
+    
+	<LifeStageDef>
+		<defName>RH_TET_Ancient</defName>
+		<label>ancient</label>
+		<voxPitch>0.8</voxPitch>
+		<voxVolume>1.2</voxVolume>
+		<bodySizeFactor>1.20</bodySizeFactor>
+		<healthScaleFactor>1.20</healthScaleFactor>
+		<hungerRateFactor>2.0</hungerRateFactor>
+		<marketValueFactor>1.2</marketValueFactor>
+		<statFactors>
+			<MoveSpeed>1.25</MoveSpeed>
+		</statFactors>
+	</LifeStageDef>
+  
+	<PawnKindDef Name="RH_TET_JabberslythePawnKind">
+		<defName>RH_TET_Jabberslythe</defName>
+		<label>jabberslythe</label>
+		<race>RH_TET_JabberslytheRace</race>
+		<combatPower>1500</combatPower>
+		<defaultFactionType>RH_TET_ChaosMonsterFaction</defaultFactionType>
+		<aiAvoidCover>true</aiAvoidCover>
+		<ecoSystemWeight>0</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Jabberslythe/RH_TET_Jabberslythe</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>5.3</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Jabberslythe/RH_TET_Jabberslythe_Dessicated</texPath>
+					<drawSize>5.5</drawSize>
+				</dessicatedBodyGraphicData>
+				<butcherBodyPart>
+					<bodyPartGroup>RH_TET_Tounge</bodyPartGroup>
+					<thing>RH_TET_JabberTounge</thing>
+				</butcherBodyPart>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Jabberslythe/RH_TET_Jabberslythe</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>10.0</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Jabberslythe/RH_TET_Jabberslythe_Dessicated</texPath>
+					<drawSize>10.0</drawSize>
+				</dessicatedBodyGraphicData>
+				<butcherBodyPart>
+					<bodyPartGroup>RH_TET_Tounge</bodyPartGroup>
+					<thing>RH_TET_JabberTounge</thing>
+				</butcherBodyPart>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Jabberslythe/RH_TET_Jabberslythe</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>13.0</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Jabberslythe/RH_TET_Jabberslythe_Dessicated</texPath>
+					<drawSize>13.0</drawSize>
+				</dessicatedBodyGraphicData>
+				<butcherBodyPart>
+					<bodyPartGroup>RH_TET_Tounge</bodyPartGroup>
+					<thing>RH_TET_JabberTounge</thing>
+				</butcherBodyPart>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+  
+	<PawnKindDef ParentName="RH_TET_JabberslythePawnKind">
+		<defName>RH_TET_JabberslytheRaceAnimal</defName>
+		<race>RH_TET_JabberslytheRaceAnimal</race>
+	</PawnKindDef>
+  
+	<!-- RACE DEFS -->
+	<ThingDef Name="RH_TET_JabberslytheRace" ParentName="BaseChaos">
+		<defName>RH_TET_JabberslytheRace</defName>
+		<label>jabberslythe</label>
+		<thingClass>TheEndTimes.Jabberslythe</thingClass>
+		<description>A huge and hideous true monster of chaos. It's corruption is undescribable.</description>
+		<tradeability>None</tradeability>
+		<statBases>
+			<ComfyTemperatureMin>-25</ComfyTemperatureMin>
+			<ComfyTemperatureMax>100</ComfyTemperatureMax>
+			<MoveSpeed>6.5</MoveSpeed>
+			<ArmorRating_Heat>0</ArmorRating_Heat>
+			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+			<CarryingCapacity>150</CarryingCapacity>
+			<MarketValue>15000</MarketValue>
+			<MeatAmount>300</MeatAmount>
+			<ToxicResistance>0.20</ToxicResistance>
+		</statBases>
+		<tools>
+			<li>
+				<label>teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>40</power>
+				<cooldownTime>2.5</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>left claws</label>
+				<capacities>
+					<li>Scratch</li>
+					<li>Stab</li>
+					<li>Blunt</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right claws</label>
+				<capacities>
+					<li>Scratch</li>
+					<li>Stab</li>
+					<li>Blunt</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>wings</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>3</cooldownTime>
+				<linkedBodyPartsGroup>RH_TET_Wings</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>tounge</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>15</power>
+				<cooldownTime>3</cooldownTime>
+				<linkedBodyPartsGroup>RH_TET_Tounge</linkedBodyPartsGroup>
+			</li>
+		</tools>
+		<race>
+			<wildBiomes/>
+			<useMeatFrom>RH_TET_ChaosSpawnRace</useMeatFrom>
+			<wildness>0.98</wildness>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>Animal</thinkTreeMain>
+			<body>RH_TET_JabberslytheBody</body>
+			<leatherDef>RH_TET_Leather_Jabberslythe</leatherDef>
+			<herdAnimal>false</herdAnimal>
+			<herdMigrationAllowed>false</herdMigrationAllowed>
+			<predator>true</predator>
+			<maxPreyBodySize>6.0</maxPreyBodySize>
+			<baseHungerRate>0.3</baseHungerRate>
+			<foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
+			<baseBodySize>6.0</baseBodySize>
+			<baseHealthScale>21.0</baseHealthScale>
+			<lifeExpectancy>1500</lifeExpectancy>
+			<trainability>Advanced</trainability>
+			<manhunterOnDamageChance>1</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0.025</manhunterOnTameFailChance>
+			<lifeStageAges>
+				<li>
+					<def>RH_TET_Young</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>RH_TET_Grown</def>
+					<minAge>200</minAge>
+					<soundCall>RH_TET_Jabberslythe_Call</soundCall>
+				</li>
+				<li>
+					<def>RH_TET_Ancient</def>
+					<minAge>600</minAge>
+				</li>
+			</lifeStageAges>
+			<nameGenerator>NamerAnimalGenericMale</nameGenerator>
+			<nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
+			<soundCallIntervalRange>
+				<min>1000</min>
+				<max>2000</max>
+			</soundCallIntervalRange>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+		<recipes>
+			<li>Euthanize</li>
+		</recipes>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_JabberslytheRace">
+		<defName>RH_TET_JabberslytheRaceAnimal</defName>
+		<race>
+			<intelligence>Animal</intelligence>
+			<wildBiomes>
+				<Tundra>0.01</Tundra>
+				<ColdBog>0.01</ColdBog>
+				<TropicalRainforest>0.01</TropicalRainforest>
+				<Desert>0.01</Desert>
+				<AridShrubland>0.01</AridShrubland>
+				<TemperateForest>0.01</TemperateForest>
+				<BorealForest>0.01</BorealForest>
+			</wildBiomes>
+		</race>
+	</ThingDef>
+  
+	<ThingDef ParentName="LeatherBase">
+		<defName>RH_TET_Leather_Jabberslythe</defName>
+		<label>jabberslythe hide</label>
+		<description>The tanned flesh and scales of a jabberslythe. Gross, but extraordinarily durable. Used for the strong crafts for its insulation and strength.</description>
+		<graphicData>
+			<color>(4,135,17)</color>
+			<colorTwo>(4,135,17)</colorTwo>
+		</graphicData>
+		<statBases>
+			<MarketValue>13.0</MarketValue>
+			<StuffPower_Armor_Sharp>1.85</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.4</StuffPower_Armor_Blunt>
+			<StuffPower_Insulation_Cold>22</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>28</StuffPower_Insulation_Heat>
+		</statBases>
+		<stuffProps>
+			<color>(4,135,17)</color>
+			<commonality>0.0015</commonality>
+		</stuffProps>
+	</ThingDef>
+
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>RH_TET_JabberTounge</defName>
+		<label>jabberslythe's tongue</label>
+		<description>The tongue of a jabberslythe. It's sticky, and it smells. It's inherent magic make it usable in the creation of magic items. Consuming this item raw has a 1 in 20 chance of granting the consumer magic from one of the chaos lores of magic. It also will likely cause food poisoning, and will cause chaos corruption in the consumer</description>
+		<graphicData>
+			<texPath>Things/Item/Special/RH_TET_JabberTounge</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<stackLimit>5</stackLimit>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<MarketValue>450</MarketValue>
+			<MaxHitPoints>75</MaxHitPoints>
+			<Mass>.25</Mass>
+			<Flammability>1.0</Flammability>
+			<Beauty>-8</Beauty>
+			<DeteriorationRate>2</DeteriorationRate>
+			<Nutrition>0.75</Nutrition>
+			<FoodPoisonChanceFixedHuman>0.35</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<ingestible>
+			<foodType>AnimalProduct</foodType>
+			<ingestEffect>EatMeat</ingestEffect>
+			<ingestSound>RawMeat_Eat</ingestSound>
+			<tasteThought>AteRawFood</tasteThought>
+			<preferability>DesperateOnly</preferability>
+		</ingestible>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>5</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<thingCategories>
+			<li>Items</li>
+			<li>AnimalProductRaw</li>
+		</thingCategories>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<techLevel>Medieval</techLevel>
+		<tradeTags>
+			<li>ArtifactComponent</li>
+		</tradeTags>
+	</ThingDef>
+  
+</Defs>

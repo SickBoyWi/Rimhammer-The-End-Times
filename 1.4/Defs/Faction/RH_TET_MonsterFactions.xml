@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef ParentName="FactionBase">
+		<defName>RH_TET_ChaosMonsterFaction</defName>
+		<label>chaos monsters</label>
+		<description>mutations and abominations</description>
+		<pawnSingular>chaos abomination</pawnSingular>
+		<pawnsPlural>chaos abominations</pawnsPlural>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<fixedName>Chaos Abominations</fixedName>
+		<factionIconPath>World/ChaosMonsters</factionIconPath>
+		<canStageAttacks>true</canStageAttacks>
+		<colorSpectrum>
+			<li>(0.44, 0.41, 0.32)</li>
+			<li>(0.61, 0.58, 0.49)</li>
+			<li>(0.60, 0.49, 0.36)</li>
+		</colorSpectrum>
+		<raidCommonalityFromPointsCurve>
+			<points>
+				<li>(0,.25)</li>
+				<li>(50, .3)</li>
+				<li>(100, .5)</li>
+				<li>(200, .75)</li>
+				<li>(400, 1)</li>
+				<li>(900, 1.1)</li>
+				<li>(1500, 1.5)</li>
+			</points>
+		</raidCommonalityFromPointsCurve>
+		<humanlikeFaction>false</humanlikeFaction>
+		<hidden>true</hidden>
+		<autoFlee>false</autoFlee>
+		<canUseAvoidGrid>false</canUseAvoidGrid>
+		<techLevel>Medieval</techLevel>
+		<earliestRaidDays>3</earliestRaidDays>
+		<permanentEnemy>true</permanentEnemy>
+		<hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
+		<maxPawnCostPerTotalPointsCurve>
+			<points>
+				<li>(0,35)</li>
+				<li>(50, 35)</li>
+				<li>(100, 50)</li>
+				<li>(200, 100)</li>
+				<li>(400,600)</li>
+				<li>(900,1500)</li>
+				<li>(100000,10000)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+		<pawnGroupMakers>
+			<li>
+				<!-- Melee only-->
+				<kindDef>Settlement</kindDef>
+				<commonality>100</commonality>
+				<options>
+					<RH_TET_ChaosWarhound>5</RH_TET_ChaosWarhound>
+					<RH_TET_Tuskgor>3</RH_TET_Tuskgor>
+					<RH_TET_Razorgor>3</RH_TET_Razorgor>
+					<RH_TET_ChaosSpawn>10</RH_TET_ChaosSpawn>
+					<RH_TET_ChaosSpawnAncient>5</RH_TET_ChaosSpawnAncient>
+				</options>
+			</li>
+			<li>
+				<!-- Melee only-->
+				<kindDef>Combat</kindDef>
+				<commonality>100</commonality>
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<options>
+					<RH_TET_ChaosWarhound>20</RH_TET_ChaosWarhound>
+					<RH_TET_Tuskgor>15</RH_TET_Tuskgor>
+					<RH_TET_Razorgor>3</RH_TET_Razorgor>
+					<RH_TET_ChaosSpawn>15</RH_TET_ChaosSpawn>
+				</options>
+			</li>
+			<li>
+				<!-- Melee only-->
+				<kindDef>Combat</kindDef>
+				<commonality>100</commonality>
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<options>
+					<RH_TET_ChaosWarhound>20</RH_TET_ChaosWarhound>
+					<RH_TET_Tuskgor>15</RH_TET_Tuskgor>
+					<RH_TET_Razorgor>3</RH_TET_Razorgor>
+					<RH_TET_ChaosSpawn>15</RH_TET_ChaosSpawn>
+					<RH_TET_ChaosSpawnAncient>5</RH_TET_ChaosSpawnAncient>
+				</options>
+			</li>
+			<li>
+				<!-- Melee only-->
+				<kindDef>Combat</kindDef>
+				<commonality>50</commonality>
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<options>
+					<RH_TET_ChaosWarhound>25</RH_TET_ChaosWarhound>
+					<RH_TET_Tuskgor>15</RH_TET_Tuskgor>
+					<RH_TET_Razorgor>5</RH_TET_Razorgor>
+					<RH_TET_ChaosSpawn>20</RH_TET_ChaosSpawn>
+					<RH_TET_ChaosSpawnAncient>8</RH_TET_ChaosSpawnAncient>
+					<RH_TET_Jabberslythe>1</RH_TET_Jabberslythe>
+				</options>
+			</li>
+			<li>
+				<!-- Melee only-->
+				<kindDef>Combat</kindDef>
+				<commonality>15</commonality>
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<options>
+					<RH_TET_ChaosWarhound>25</RH_TET_ChaosWarhound>
+					<RH_TET_Tuskgor>18</RH_TET_Tuskgor>
+					<RH_TET_Razorgor>8</RH_TET_Razorgor>
+					<RH_TET_ChaosSpawn>22</RH_TET_ChaosSpawn>
+					<RH_TET_ChaosSpawnAncient>10</RH_TET_ChaosSpawnAncient>
+					<RH_TET_Jabberslythe>1</RH_TET_Jabberslythe>
+				</options>
+			</li>
+			<li>
+				<!-- Melee only-->
+				<kindDef>Combat</kindDef>
+				<commonality>10</commonality>
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<options>
+					<RH_TET_ChaosWarhound>25</RH_TET_ChaosWarhound>
+					<RH_TET_Jabberslythe>1</RH_TET_Jabberslythe>
+				</options>
+			</li>
+		</pawnGroupMakers>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+		<allowedArrivalTemperatureRange>-100~200</allowedArrivalTemperatureRange>
+		<maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>1010</configurationListOrderPriority>
+		<canSiege>false</canSiege>
+	</FactionDef>
+
+</Defs>

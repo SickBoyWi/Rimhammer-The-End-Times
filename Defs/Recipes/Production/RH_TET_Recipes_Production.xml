@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef>
+		<defName>RH_TET_ExtractMetalFromSlag</defName>
+		<label>smelt metal from slag</label>
+		<description>Use heat to extract useful metal from slag chunks.</description>
+		<jobString>Smelting metal from slag.</jobString>
+		<workAmount>1600</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ChunkSlagSteel</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<Steel>20</Steel>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ChunkSlagSteel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_SmeltWeapon</defName>
+		<label>smelt weapon</label>
+		<description>Use heat to break down weapons into useful resources.</description>
+		<jobString>Smelting weapon.</jobString>
+		<workAmount>1600</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<specialProducts>
+			<li>Smelted</li>
+		</specialProducts>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Weapons</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Weapons</li>
+			</categories>
+			<specialFiltersToDisallow>
+				<li>AllowNonSmeltableWeapons</li>
+			</specialFiltersToDisallow>
+		</fixedIngredientFilter>
+		<forceHiddenSpecialFilters>
+			<li>AllowSmeltable</li>
+		</forceHiddenSpecialFilters>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_SmeltApparel</defName>
+		<label>smelt apparel</label>
+		<description>Use heat to break down metallic apparel like armor into useful resources.</description>
+		<jobString>Smelting apparel.</jobString>
+		<workAmount>1600</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<specialProducts>
+			<li>Smelted</li>
+		</specialProducts>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Apparel</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Apparel</li>
+			</categories>
+			<specialFiltersToDisallow>
+				<li>AllowNonSmeltableApparel</li>
+			</specialFiltersToDisallow>
+		</fixedIngredientFilter>
+		<forceHiddenSpecialFilters>
+			<li>AllowSmeltableApparel</li>
+			<li>AllowBurnableApparel</li>
+			<li>AllowNonBurnableApparel</li>
+		</forceHiddenSpecialFilters>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_DestroyWeapon</defName>
+		<label>destroy weapon</label>
+		<description>Use heat to destroy unwanted weapons. This process is faster than smelting, and works on non-smeltable items, but yields no resources.</description>
+		<jobString>Destroying weapon.</jobString>
+		<workAmount>400</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Weapons</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Weapons</li>
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>Weapons</li>
+			</categories>
+			<disallowedThingDefs>
+				<li>Gun_DoomsdayRocket</li>
+				<li>Gun_TripleRocket</li>
+				<li>OrbitalTargeterPowerBeam</li>
+				<li>OrbitalTargeterBombardment</li>
+				<li>TornadoGenerator</li>
+			</disallowedThingDefs>
+		</defaultIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_DestroyApparel</defName>
+		<label>destroy apparel</label>
+		<description>Use heat to destroy unwanted apparels. This process is faster than smelting, and works on non-smeltable items, but yields no resources.</description>
+		<jobString>Destroying apparel.</jobString>
+		<workAmount>400</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Apparel</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Apparel</li>
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>Apparel</li>
+			</categories>
+		</defaultIngredientFilter>
+	</RecipeDef>
+  
+</Defs>

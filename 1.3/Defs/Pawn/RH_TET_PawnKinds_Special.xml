@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef ParentName="TribalBase">
+    <defName>StrangerInBlack</defName>
+    <label>stranger in black</label>
+    <labelMale>man in black</labelMale>
+    <labelFemale>woman in black</labelFemale>
+    <labelPlural>strangers in black</labelPlural>
+    <combatPower>100</combatPower>
+    <minGenerationAge>20</minGenerationAge>
+    <maxGenerationAge>50</maxGenerationAge>
+    <isFighter>true</isFighter>
+    <race>Human</race>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+    <backstoryCryptosleepCommonality>0.0</backstoryCryptosleepCommonality>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Outlander</li>
+          <li>Outsider</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <invNutrition>10.0</invNutrition>
+    <invFoodDef>MealSimple</invFoodDef>
+    <inventoryOptions>
+      <subOptionsChooseOne>
+        <li>
+          <choiceChance>6</choiceChance>
+          <thingDef>MedicineHerbal</thingDef>
+          <countRange>5</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <gearHealthRange>
+      <min>1</min>
+      <max>1</max>
+    </gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <weaponMoney>
+      <min>500</min>
+      <max>1000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>MedievalMeleeDecent</li>
+    </weaponTags>
+    <apparelRequired>
+      <li>Apparel_CollarShirt</li>
+      <li>Apparel_Pants</li>
+      <li>Apparel_Duster</li>
+      <li>Apparel_CowboyHat</li>
+    </apparelRequired>
+    <apparelColor>(58,58,58)</apparelColor>
+    <initialResistanceRange>10~26</initialResistanceRange>
+    <initialWillRange>0~0</initialWillRange>
+  </PawnKindDef>
+
+</Defs>

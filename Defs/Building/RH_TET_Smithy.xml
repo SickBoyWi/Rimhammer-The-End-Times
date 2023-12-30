@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ======= Smithing ============= -->
+
+	<WorkGiverDef>
+		<defName>RH_TET_DoSmithing</defName>
+		<label>smith</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Smithing</workType>
+		<priorityInType>115</priorityInType>
+		<fixedBillGiverDefs>
+			<!--<li>RH_TET_TableSmithy</li>--><!--Added by patch if dawi/Empire aren't used. Required for repair stuff.-->
+		</fixedBillGiverDefs>
+		<verb>smith</verb>
+		<gerund>smithing at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+	<ThingDef ParentName="RH_TET_BenchBase">
+		<defName>RH_TET_TableSmithy</defName>
+		<label>anvil and forge</label>
+		<description>A place for creating weapons and armor.</description>
+		<thingClass>Building_WorkTable</thingClass>
+		<size>(5,2)</size>
+		<graphicData>
+			<texPath>Things/Building/Production/TET_Forge/TET_Forge</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(5,5)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<filthLeaving>Filth_RubbleBuilding</filthLeaving>
+		<costList>
+			<Steel>75</Steel>
+			<WoodLog>10</WoodLog>
+		</costList>
+		<costStuffCount>100</costStuffCount>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<altitudeLayer>Building</altitudeLayer>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<Mass>300</Mass>
+			<WorkToBuild>3000</WorkToBuild>
+			<MaxHitPoints>180</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Cleanliness>-2</Cleanliness>
+			<WorkTableWorkSpeedFactor>1.0</WorkTableWorkSpeedFactor>
+		</statBases>
+		<designationCategory>Production</designationCategory>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+		<recipes>
+			<li>RH_TET_ExtractMetalFromSlag</li>
+			<li>RH_TET_SmeltWeapon</li>
+			<li>RH_TET_SmeltApparel</li>
+			<li>Make_ComponentIndustrial</li>
+			<li>RH_TET_DestroyWeapon</li>
+			<li>RH_TET_DestroyApparel</li>
+		</recipes>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			<heatPerTickWhileWorking>0.32</heatPerTickWhileWorking>
+		</building>
+		<comps>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>80.0</fuelConsumptionRate>
+				<fuelCapacity>50.0</fuelCapacity>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+						<li>RH_TET_Coal</li>
+					</thingDefs>
+				</fuelFilter>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(237,131,43,0)</glowColor>
+			</li>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>ToolCabinet</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+			<li>PlaceWorker_ReportWorkSpeedPenalties</li>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>Smithing</li>
+		</researchPrerequisites>
+		<designationHotKey>Misc7</designationHotKey>
+		<castEdgeShadows>false</castEdgeShadows>
+		<staticSunShadowHeight>0</staticSunShadowHeight>
+	</ThingDef>
+	
+</Defs>

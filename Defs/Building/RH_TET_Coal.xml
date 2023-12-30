@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+	<ThingDef ParentName="RockBase">
+		<defName>RH_TET_MineableCoal</defName>
+		<label>coal</label>
+		<description>A seam of naturally formed coal.</description>
+		<graphicData>
+			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(18,18,18)</color>
+			<colorTwo>(93,93,93)</colorTwo>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1250</MaxHitPoints>
+		</statBases>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>RH_TET_Coal</mineableThing>
+			<mineableYield>40</mineableYield>
+			<mineableScatterCommonality>0.3</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>
+				<min>20</min>
+				<max>45</max>
+			</mineableScatterLumpSizeRange>
+		</building>
+	</ThingDef>
+  
+</Defs>

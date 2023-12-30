@@ -1,0 +1,5 @@
+C:\BackUp\Modding\Rimworld\SickBoyWi\Warhammer-The-End-Times\Source\RemoveModernStuff\obj\Debug\RemovePostMedieval.csprojAssemblyReference.cache
+C:\BackUp\Modding\Rimworld\SickBoyWi\Warhammer-The-End-Times\Source\RemoveModernStuff\obj\Debug\RemovePostMedieval.csproj.CoreCompileInputs.cache
+C:\BackUp\Modding\Rimworld\SickBoyWi\Warhammer-The-End-Times\Source\RemoveModernStuff\obj\Debug\RemovePostMedieval.csproj.CopyComplete
+C:\BackUp\Modding\Rimworld\SickBoyWi\Warhammer-The-End-Times\Assemblies\TheEndTimes.dll
+C:\BackUp\Modding\Rimworld\SickBoyWi\Warhammer-The-End-Times\Source\RemoveModernStuff\obj\Debug\TheEndTimes.dll

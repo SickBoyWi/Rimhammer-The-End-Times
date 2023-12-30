@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingSetMakerDef>
+		<defName>RH_TET_Treasure</defName>
+		<root Class="ThingSetMaker_RandomOption">
+			<fixedParams>
+				<totalMarketValueRange>
+					<min>2000</min>
+					<max>3500</max>
+				</totalMarketValueRange>
+				<qualityGenerator>Reward</qualityGenerator>
+			</fixedParams>
+			<options>
+				<li>
+					<weight>1</weight>
+					<thingSetMaker Class="ThingSetMaker_MarketValue">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>Gold</li>
+								</thingDefs>
+							</filter>
+						</fixedParams>
+					</thingSetMaker>
+				</li>
+			</options>
+		</root>
+	</ThingSetMakerDef>
+
+	<QuestScriptDef>
+		<defName>RH_TET_OpportunitySite_JabberslytheLair</defName>
+		<rootSelectionWeight>0.8</rootSelectionWeight>
+		<rootMinPoints>400</rootMinPoints>
+		<autoAccept>true</autoAccept>
+		<canGiveRoyalFavor>true</canGiveRoyalFavor>
+		<questNameRules>
+			<rulesStrings>
+				<li>questName->Lair of a jabberslythe</li>
+				<li>questName->The Jabberslythe Lair</li>
+				<li>questName->Destroy the jabberslythe</li>
+			</rulesStrings>
+		</questNameRules>
+		<questDescriptionRules>
+			<rulesStrings>
+				<li>questDescription->A foul beast of chaos has set up a lair in a cave nearby from which to wreak havoc across the land. It's gathered wealth, and resources there by plundering nearby holds and villages. There's much risk and much reward to be had by destroying the beast and claiming its treasure.</li>
+			</rulesStrings>
+		</questDescriptionRules>
+		<root Class="QuestNode_Sequence">
+			<nodes>
+				<li Class="QuestNode_GetMap"/>
+
+				<li Class="TheEndTimes.QuestNode_GetSiteTileMountainCave">
+					<storeAs>siteTile</storeAs>
+					<preferCloserTiles>true</preferCloserTiles>
+				</li>
+
+				<li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+					<storeAs>sitePartDefs</storeAs>
+					<storeFactionAs>siteFaction</storeFactionAs>
+					<sitePartsTags>
+						<li><tag>RH_TET_JabberslytheLair</tag></li>
+					</sitePartsTags>
+				</li>
+
+				<li Class="TheEndTimes.QuestNode_GetDefaultSitePartsParamsChaos">
+					<tile>$siteTile</tile>
+					<faction>$siteFaction</faction>
+					<sitePartDefs>$sitePartDefs</sitePartDefs>
+					<storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+				</li>
+
+				<li Class="QuestNode_SubScript">
+					<def>Util_GenerateSite</def>
+				</li>
+        
+				<li Class="QuestNode_SpawnWorldObjects">
+					<worldObjects>$site</worldObjects>
+				</li>
+
+				<li Class="QuestNode_WorldObjectTimeout">
+					<worldObject>$site</worldObject>
+					<isQuestTimeout>true</isQuestTimeout>
+					<delayTicks>$(randInt(12,28)*60000)</delayTicks>
+					<inSignalDisable>site.MapGenerated</inSignalDisable>
+					<node Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Letter">
+								<label>Quest expired: [resolvedQuestName]</label>
+								<text>The jabberslyte appears to have been killed or moved on. The quest [resolvedQuestName] has expired.</text>
+							</li>
+							<li Class="QuestNode_End">
+								<outcome>Fail</outcome>
+							</li>
+						</nodes>
+					</node>
+				</li>
+
+				<li Class="QuestNode_Signal">
+					<inSignal>site.AllEnemiesDefeated</inSignal>
+				</li>
+		
+				<li Class="QuestNode_End">
+					<inSignal>site.AllEnemiesDefeated</inSignal>
+					<outcome>Success</outcome>
+				</li>
+			</nodes>
+		</root>
+	</QuestScriptDef>
+  
+	<SitePartDef>
+		<defName>RH_TET_JabberslytheLair</defName>
+		<label>jabberslythe lair</label>
+		<description>A horde of wealth, and a horrible corruption of chaos that has gathered it.</description>
+		<tags>
+			<li>RH_TET_JabberslytheLair</li>
+		</tags>
+	
+		<workerClass>TheEndTimes.SitePartWorker_JabberslytheLair</workerClass>
+		<siteTexture>World/WorldObjects/Sites/Outpost</siteTexture>
+		<expandingIconTexture>World/Quests/JabberslytheLair</expandingIconTexture>
+		<applyFactionColorToSiteTexture>false</applyFactionColorToSiteTexture>
+		<showFactionInInspectString>false</showFactionInInspectString>
+		<requiresFaction>false</requiresFaction>
+		<approachOrderString>Attack {0}</approachOrderString>
+		<approachingReportString>Attacking {0}</approachingReportString>
+		<arrivedLetter>Be wary. There is a jabberslythe lair in this area.</arrivedLetter>
+		<arrivedLetterDef>NegativeEvent</arrivedLetterDef>
+		<wantsThreatPoints>false</wantsThreatPoints>
+	</SitePartDef>
+
+	<GenStepDef>
+		<defName>RH_TET_JabberslytheLair</defName>
+		<linkWithSite>RH_TET_JabberslytheLair</linkWithSite>
+		<order>455</order>
+		<genStep Class="TheEndTimes.GenStep_JabberslytheLair"/>
+	</GenStepDef>
+
+	<RuleDef>
+		<defName>RH_TET_CorpseMaker</defName>
+		<symbol>corpseMaker</symbol>
+		<resolvers>
+			<li Class="TheEndTimes.SymbolResolver_CorpseMaker"/>
+		</resolvers>
+	</RuleDef>
+
+</Defs>

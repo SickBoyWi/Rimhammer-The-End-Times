@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>RH_TET_Stove</defName>
+    <label>stove furnace</label>
+    <thingClass>TheEndTimes.Building_Stove</thingClass>
+    <description>Generates heat, and can be used to cook meals.</description>    
+    <category>Building</category>
+	<thingCategories><li>Buildings</li></thingCategories>
+    <graphicData>
+      <texPath>Things/Building/Temperature/Stove/RH_TET_Stove</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <rect>(0.2,0,0.6,0.1)</rect>
+      </damageData>
+	  <drawSize>(3,3)</drawSize>
+      <shadowData>
+        <volume>(0.25,0.4,0.7)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>	  
+    </graphicData>
+	<uiIconPath>UI/Icons/Stove/Stove_ico</uiIconPath>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <constructEffect>ConstructMetal</constructEffect>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>0.25</fillPercent>
+    <statBases>
+      <Mass>150</Mass>		
+      <MaxHitPoints>110</MaxHitPoints>
+      <WorkToBuild>2200</WorkToBuild>
+      <Flammability>0.5</Flammability> 
+    </statBases>
+    <researchPrerequisites>
+      <li>RH_TET_Stove</li>
+    </researchPrerequisites>	
+    <selectable>true</selectable>
+	<size>(1,1)</size>
+    <costList>
+      <Steel>105</Steel>
+    </costList>
+	<minifiedDef>MinifiedThing</minifiedDef>	
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,1)</interactionCellOffset>	
+    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+    <placeWorkers>
+      <li>PlaceWorker_Heater</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <comps>
+      <!--<li Class="CompProperties_Flickable"/>-->
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>10.0</fuelConsumptionRate>
+        <fuelCapacity>30.0</fuelCapacity>
+        <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+        <fuelFilter>
+          <thingDefs>
+            <li>WoodLog</li>
+            <li>RH_TET_Coal</li>
+          </thingDefs>
+        </fuelFilter>
+        <destroyOnNoFuel>false</destroyOnNoFuel>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+      <!--<li Class="CompProperties_Breakdownable"/>-->
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(255,219,136,0)</glowColor>
+      </li>
+      <!--<li Class="CompProperties_Flickable"/>-->
+      <li Class="CompProperties_HeatPusher">
+	    <compClass>TheEndTimes.CompStoveRefuelable</compClass>
+        <heatPerSecond>21</heatPerSecond>
+        <heatPushMaxTemperature>28</heatPushMaxTemperature>
+      </li>
+    </comps>
+    <designationCategory>Production</designationCategory>
+    <designationHotKey>Misc1</designationHotKey>
+    <recipes>
+      <li>CookMealSimple</li>
+      <li>CookMealSimpleBulk</li>
+      <li>CookMealFine</li>
+      <li>CookMealFineBulk</li>
+      <li>CookMealLavish</li>
+      <li>CookMealLavishBulk</li>
+      <li>Make_Pemmican</li>
+      <li>Make_PemmicanBulk</li>
+      <li>CookMealFine_Veg</li>
+      <li>CookMealFineBulk_Veg</li>
+      <li>CookMealFine_Meat</li>
+      <li>CookMealFineBulk_Meat</li>
+      <li>CookMealLavish_Veg</li>
+      <li>CookMealLavishBulk_Veg</li>
+      <li>CookMealLavish_Meat</li>
+      <li>CookMealLavishBulk_Meat</li>
+      <li>BurnApparel</li>
+      <li>BurnDrugs</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <isMealSource>true</isMealSource>
+    </building>
+  </ThingDef>
+
+</Defs>

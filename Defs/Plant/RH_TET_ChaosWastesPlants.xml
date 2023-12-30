@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+	<ThingDef Name="RH_TET_PlantBase" Abstract="True">
+		<category>Plant</category>
+		<thingClass>Plant</thingClass>
+		<altitudeLayer>LowPlant</altitudeLayer>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<Flammability>1</Flammability>
+		</statBases>
+		<tickerType>Long</tickerType>
+		<selectable>False</selectable>
+		<neverMultiSelect>True</neverMultiSelect>
+		<drawerType>MapMeshOnly</drawerType>
+		<pathCostIgnoreRepeat>false</pathCostIgnoreRepeat>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shaderType>CutoutPlant</shaderType>
+		</graphicData>
+		<ingestible>
+			<foodType>Plant</foodType>
+			<preferability>RawBad</preferability>
+		</ingestible>
+		<plant>
+			<fertilityMin>0.7</fertilityMin>
+			<fertilitySensitivity>1.0</fertilitySensitivity>
+			<soundHarvesting>Harvest_Standard</soundHarvesting>
+			<soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
+			<sowWork>170</sowWork>
+			<harvestWork>250</harvestWork>
+			<visualSizeRange>0.3~1.0</visualSizeRange>
+			<topWindExposure>0.1</topWindExposure>
+		</plant>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_PlantBase" Name="TH_TET_TreeBase" Abstract="True">
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0.8</Flammability>
+			<Nutrition>1.7</Nutrition>
+		</statBases>
+		<altitudeLayer>Building</altitudeLayer>
+		<selectable>true</selectable>
+		<fillPercent>0.25</fillPercent>
+		<graphicData>
+			<shadowData>
+				<volume>(0.2, 0.35, 0.13)</volume>
+				<offset>(0,0,-0.42)</offset>
+			</shadowData>
+		</graphicData>
+		<passability>PassThroughOnly</passability>
+		<pathCost>130</pathCost>
+		<blockWind>true</blockWind>
+		<ingestible>
+			<foodType>Tree</foodType>
+			<preferability>RawBad</preferability>
+		</ingestible>
+		<plant>
+			<lifespanDaysPerGrowDays>9</lifespanDaysPerGrowDays>
+			<fertilitySensitivity>0.01</fertilitySensitivity>
+			<soundHarvesting>Harvest_Tree</soundHarvesting>
+			<soundHarvestFinish>Harvest_Tree_Finish</soundHarvestFinish>
+			<sowWork>4000</sowWork>
+			<sowMinSkill>6</sowMinSkill>
+			<sowResearchPrerequisites>
+				<li>TreeSowing</li>
+			</sowResearchPrerequisites>
+			<mustBeWildToSow>true</mustBeWildToSow>
+			<harvestWork>800</harvestWork>
+			<harvestedThingDef>WoodLog</harvestedThingDef>
+			<harvestYield>50</harvestYield>
+			<harvestTag>Wood</harvestTag>
+			<harvestMinGrowth>0.40</harvestMinGrowth>
+			<harvestFailable>false</harvestFailable>
+			<blockAdjacentSow>true</blockAdjacentSow>
+			<sowTags>
+				<li>Ground</li>
+			</sowTags>
+			<visualSizeRange>1.3~2.0</visualSizeRange>
+			<topWindExposure>0.25</topWindExposure>
+			<wildClusterRadius>8</wildClusterRadius>
+			<wildClusterWeight>24</wildClusterWeight>
+			<wildOrder>3</wildOrder>
+			<interferesWithRoof>true</interferesWithRoof>
+		</plant>
+	</ThingDef>
+  
+	<ThingDef ParentName="TH_TET_TreeBase">
+		<defName>PlantChaosWastesTreeDead</defName>
+		<label>dead tree</label>
+		<description>A tree; either dead, or on the verge of death.</description>
+		<graphicData>
+			<texPath>Things/Plant/TET_DeadTree</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<statBases>
+			<Nutrition>0.04</Nutrition>
+			<Beauty>-3</Beauty>
+		</statBases>
+		<plant>
+			<dieIfLeafless>false</dieIfLeafless>
+			<fertilityMin>0.01</fertilityMin>
+			<growDays>100</growDays>
+			<harvestWork>1200</harvestWork>
+			<harvestYield>40</harvestYield>
+			<visualSizeRange>1.3~2.4</visualSizeRange>
+		</plant>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_PlantBase">
+		<defName>PlantChaosWastesGrass</defName>
+		<label>wasteland grass</label>
+		<description>Wild grass. Grows slow. Slows down anyone moving over it. Dry and mostly dead, doesn't provide much nutrition.</description>
+		<statBases>
+			<MaxHitPoints>90</MaxHitPoints>
+			<Flammability>1.3</Flammability>
+			<Nutrition>0.05</Nutrition>
+		</statBases>
+		<pathCost>10</pathCost>
+		<graphicData>
+			<texPath>Things/Plant/TET_Grass</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<hideAtSnowDepth>0.5</hideAtSnowDepth>
+		<ingestible/>
+		<plant>
+			<fertilityMin>0.25</fertilityMin>
+			<fertilitySensitivity>0.45</fertilitySensitivity>
+			<growDays>4</growDays>
+			<harvestWork>60</harvestWork>
+			<maxMeshCount>9</maxMeshCount>
+			<visualSizeRange>0.3~0.55</visualSizeRange>
+			<topWindExposure>0.3</topWindExposure>
+		</plant>
+	</ThingDef>
+  
+	<ThingDef ParentName="TreeBase">
+		<defName>TET_TwistedTree</defName>
+		<label>twisted tree</label>
+		<description>A tree that was twisted by chaos.</description>
+		<graphicData>
+			<texPath>Things/Plant/TET_TwistedTree</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shadowData>
+				<volume>(0.55, 0.2, 0.2)</volume>
+				<offset>(0,0,-0.25)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<statBases>
+			<Beauty>0</Beauty>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Flammability>0.65</Flammability>
+		</statBases>
+		<blockLight>true</blockLight>
+		<plant>
+			<fertilityMin>0.25</fertilityMin>
+			<harvestedThingDef>WoodLog</harvestedThingDef>
+			<fertilitySensitivity>0.5</fertilitySensitivity>
+			<leaflessGraphicPath>Things/Plant_Leafless/TET_TwistedTree_Leafless</leaflessGraphicPath>
+			<growDays>18</growDays>
+			<harvestWork>1000</harvestWork>
+			<harvestYield>75</harvestYield>
+			<wildClusterWeight>8</wildClusterWeight>
+			<wildClusterRadius>10</wildClusterRadius>
+			<visualSizeRange>3.0~5.0</visualSizeRange>
+			<sowTags/>
+		</plant>
+	</ThingDef>
+	
+</Defs>

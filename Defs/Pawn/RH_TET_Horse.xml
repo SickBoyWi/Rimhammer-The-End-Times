@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="AnimalThingBase" Name="RH_TET_BaseHorse" Abstract="True">
+		<race>
+			<herdAnimal>true</herdAnimal>
+			<body>QuadrupedAnimalWithHooves</body>
+			<petness>0.6</petness>
+			<baseBodySize>2</baseBodySize>
+			<baseHealthScale>1.8</baseHealthScale>
+			<baseHungerRate>0.88</baseHungerRate>
+			<foodType>VegetarianRoughAnimal</foodType>
+			<leatherDef>Leather_Plain</leatherDef>
+			<wildness>0.35</wildness>
+			<roamMtbDays>2</roamMtbDays>
+			<trainability>Intermediate</trainability>
+			<nuzzleMtbHours>100</nuzzleMtbHours>
+			<meatLabel>horse meat</meatLabel>
+			<manhunterOnDamageChance>0.1</manhunterOnDamageChance>
+			<packAnimal>true</packAnimal>
+			<gestationPeriodDays>7.66</gestationPeriodDays>
+			<lifeExpectancy>30</lifeExpectancy>
+			<litterSizeCurve>
+				<points>
+					<li>(0.5, 0)</li>
+					<li>(1, 1)</li>
+					<li>(1.7, 1)</li>
+					<li>(2.0, 0)</li>
+				</points>
+			</litterSizeCurve>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>.75</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>1</minAge>
+					<soundCall>RH_TET_Horse_Whinny</soundCall>
+					<soundAngry>RH_TET_Horse_Snort</soundAngry>
+					<soundWounded>RH_TET_Horse_Snort</soundWounded>
+					<soundDeath>Pawn_Dromedary_Death</soundDeath>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+			<li>AnimalUncommon</li>
+			<li>AnimalFighter</li>
+		</tradeTags>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase" Name="RH_TET_HorseKindBase" Abstract="True">
+		<combatPower>120</combatPower>
+	</PawnKindDef>
+
+	<ThingDef ParentName="RH_TET_BaseHorse">
+		<defName>RH_TET_Horse</defName>
+		<label>warhorse</label>
+		<description>A warhorse. Can be a tough opponent, or a great companion.</description>
+		<statBases>
+			<MoveSpeed>10</MoveSpeed>
+			<ComfyTemperatureMin>-22</ComfyTemperatureMin>
+			<ComfyTemperatureMax>55</ComfyTemperatureMax>
+			<MarketValue>800</MarketValue>
+			<CaravanRidingSpeedFactor>1.8</CaravanRidingSpeedFactor>
+			<FilthRate>16</FilthRate>
+		</statBases>
+		<race>
+			<baseHungerRate>0.8</baseHungerRate>
+			<wildBiomes>
+				<RH_TET_ChaosWastes>0.02</RH_TET_ChaosWastes>
+				<Tundra>0.03</Tundra>
+				<ColdBog>0.035</ColdBog>
+				<TropicalRainforest>0.035</TropicalRainforest>
+				<Desert>0.06</Desert>
+				<AridShrubland>0.08</AridShrubland>
+				<TemperateForest>0.1</TemperateForest>
+				<BorealForest>0.1</BorealForest>
+			</wildBiomes>
+		</race>
+		<tools>
+			<li>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.7</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+			<li>
+				<label>left hoof</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>15</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right hoof</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>15</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<PawnKindDef ParentName="RH_TET_HorseKindBase">
+		<defName>RH_TET_Horse</defName>
+		<label>warhorse</label>
+		<race>RH_TET_Horse</race>
+		<combatPower>85</combatPower>
+		<ecoSystemWeight>0.38</ecoSystemWeight>
+		<wildGroupSize>
+			<min>4</min>
+			<max>8</max>
+		</wildGroupSize>
+		<labelFemale>mare</labelFemale>
+		<lifeStages>
+			<li>
+				<label>foal</label>
+				<labelPlural>foals</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/RH_TET_Horse/RH_TET_Horse</texPath>
+					<drawSize>1.50</drawSize>
+					<color>(230, 204, 179)</color>
+					<shadowData>
+						<volume>(0.2, 0.1, 0.2)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Alpaca/Dessicated_Alpaca</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/RH_TET_Horse/RH_TET_Horse</texPath>
+					<drawSize>2</drawSize>
+					<color>(217, 177, 140)</color>
+					<shadowData>
+						<volume>(0.3, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Alpaca/Dessicated_Alpaca</texPath>
+					<drawSize>2.25</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/RH_TET_Horse/RH_TET_Horse</texPath>
+					<drawSize>3</drawSize>
+					<color>(172, 113, 57)</color>
+					<shadowData>
+						<volume>(0.4, 0.4, 0.4)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Alpaca/Dessicated_Alpaca</texPath>
+					<drawSize>3</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

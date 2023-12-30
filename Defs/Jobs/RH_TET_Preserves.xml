@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<WorkGiverDef>
+		<defName>RH_TET_Dwarfs_TakePickledFoodFromPicklingCrock</defName>
+		<label>take pickled food from pickling crock</label>
+		<giverClass>TheEndTimes.WorkGiver_TakePickledFoodFromPicklingCrock</giverClass>
+		<workType>Hauling</workType>
+		<verb>take pickled food</verb>
+		<gerund>taking pickled foods from</gerund>
+		<priorityInType>100</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>RH_TET_Dwarfs_PutPicklingInPickleCrock</defName>
+		<label>put food in pickling crock</label>
+		<giverClass>TheEndTimes.WorkGiver_PutPicklingInPickleCrock</giverClass>
+		<workType>Hauling</workType>
+		<verb>fill</verb>
+		<gerund>filling</gerund>
+		<priorityInType>100</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>RH_TET_Dwarfs_TakePickledFoodFromPicklingCrockBulk</defName>
+		<label>take bulk pickled food from pickling crock</label>
+		<giverClass>TheEndTimes.WorkGiver_TakePickledFoodFromPicklingCrockBulk</giverClass>
+		<workType>Hauling</workType>
+		<verb>take bulk pickled food</verb>
+		<gerund>taking bulk pickled foods from</gerund>
+		<priorityInType>100</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>RH_TET_Dwarfs_PutPicklingInPickleCrockBulk</defName>
+		<label>put food in bulk pickling crock</label>
+		<giverClass>TheEndTimes.WorkGiver_PutPicklingInPickleCrockBulk</giverClass>
+		<workType>Hauling</workType>
+		<verb>fill</verb>
+		<gerund>filling</gerund>
+		<priorityInType>100</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  
+	<JobDef>
+		<defName>RH_TET_Dwarfs_PutPicklingInPickleCrock</defName>
+		<driverClass>TheEndTimes.JobDriver_PutPicklingInPickleCrock</driverClass>
+		<reportString>putting pickling into TargetA.</reportString>
+		<suspendable>false</suspendable>
+	</JobDef>
+  
+	<JobDef>
+		<defName>RH_TET_Dwarfs_TakePickledFoodFromPicklingCrock</defName>
+		<driverClass>TheEndTimes.JobDriver_TakePickledFoodFromPicklingCrock</driverClass>
+		<reportString>taking pickling food out of TargetA.</reportString>
+	</JobDef>
+  
+	<JobDef>
+		<defName>RH_TET_Dwarfs_PutPicklingInPickleCrockBulk</defName>
+		<driverClass>TheEndTimes.JobDriver_PutPicklingInPickleCrockBulk</driverClass>
+		<reportString>putting bulk pickling into TargetA.</reportString>
+		<suspendable>false</suspendable>
+	</JobDef>
+  
+	<JobDef>
+		<defName>RH_TET_Dwarfs_TakePickledFoodFromPicklingCrockBulk</defName>
+		<driverClass>TheEndTimes.JobDriver_TakePickledFoodFromPicklingCrockBulk</driverClass>
+		<reportString>taking bulk pickled food out of TargetA.</reportString>
+	</JobDef>
+  
+	<WorkGiverDef>
+		<defName>RH_TET_Dwarfs_TakeCuredMeatFromCuringPot</defName>
+		<label>take cured meat from curing pot</label>
+		<giverClass>TheEndTimes.WorkGiver_TakeCuredMeatFromCuringPot</giverClass>
+		<workType>Hauling</workType>
+		<verb>take cured meat</verb>
+		<gerund>taking cured meat from</gerund>
+		<priorityInType>100</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>RH_TET_Dwarfs_PutCureIntoCuringPot</defName>
+		<label>put meat in curing pot</label>
+		<giverClass>TheEndTimes.WorkGiver_PutCureIntoCuringPot</giverClass>
+		<workType>Hauling</workType>
+		<verb>fill</verb>
+		<gerund>filling</gerund>
+		<priorityInType>100</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  
+	<JobDef>
+		<defName>RH_TET_Dwarfs_PutCureIntoCuringPot</defName>
+		<driverClass>TheEndTimes.JobDriver_PutCureIntoCuringPot</driverClass>
+		<reportString>putting cure and meat into TargetA.</reportString>
+		<suspendable>false</suspendable>
+	</JobDef>
+  
+	<JobDef>
+		<defName>RH_TET_Dwarfs_TakeCuredMeatFromCuringPot</defName>
+		<driverClass>TheEndTimes.JobDriver_TakeCuredMeatFromCuringPot</driverClass>
+		<reportString>taking cured meat out of TargetA.</reportString>
+	</JobDef>
+
+	<WorkGiverDef>
+		<defName>RH_TET_Dwarfs_TakeCuredMeatFromCuringPotBulk</defName>
+		<label>take bulk cured meat from curing pot</label>
+		<giverClass>TheEndTimes.WorkGiver_TakeCuredMeatFromCuringPotBulk</giverClass>
+		<workType>Hauling</workType>
+		<verb>take bulk cured meat</verb>
+		<gerund>taking bulk cured meat from</gerund>
+		<priorityInType>100</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>RH_TET_Dwarfs_PutCureIntoCuringPotBulk</defName>
+		<label>put meat in bulk curing pot</label>
+		<giverClass>TheEndTimes.WorkGiver_PutCureIntoCuringPotBulk</giverClass>
+		<workType>Hauling</workType>
+		<verb>fill</verb>
+		<gerund>filling</gerund>
+		<priorityInType>100</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  
+	<JobDef>
+		<defName>RH_TET_Dwarfs_PutCureIntoCuringPotBulk</defName>
+		<driverClass>TheEndTimes.JobDriver_PutCureIntoCuringPotBulk</driverClass>
+		<reportString>putting cure and meat into TargetA.</reportString>
+		<suspendable>false</suspendable>
+	</JobDef>
+  
+	<JobDef>
+		<defName>RH_TET_Dwarfs_TakeCuredMeatFromCuringPotBulk</defName>
+		<driverClass>TheEndTimes.JobDriver_TakeCuredMeatFromCuringPotBulk</driverClass>
+		<reportString>taking bulk cured meat out of TargetA.</reportString>
+	</JobDef>
+
+	<WorkGiverDef>
+		<defName>RH_TET_Dwarfs_TakeDriedCuredMeatFromCuringCabinet</defName>
+		<label>take dry cured meat from curing cabinet</label>
+		<giverClass>TheEndTimes.WorkGiver_TakeDriedCuredMeatFromCuringCabinet</giverClass>
+		<workType>Hauling</workType>
+		<verb>take dry cured meat</verb>
+		<gerund>taking dry cured meat from</gerund>
+		<priorityInType>100</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>RH_TET_Dwarfs_PutCuredMeatIntoCuringCabinet</defName>
+		<label>put dry cured meat in curing cabinet</label>
+		<giverClass>TheEndTimes.WorkGiver_PutCuredMeatIntoCuringCabinet</giverClass>
+		<workType>Hauling</workType>
+		<verb>fill</verb>
+		<gerund>filling</gerund>
+		<priorityInType>100</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  
+	<JobDef>
+		<defName>RH_TET_Dwarfs_PutCuredMeatIntoCuringCabinet</defName>
+		<driverClass>TheEndTimes.JobDriver_PutCuredMeatIntoCuringCabinet</driverClass>
+		<reportString>putting cured meat into TargetA.</reportString>
+		<suspendable>false</suspendable>
+	</JobDef>
+  
+	<JobDef>
+		<defName>RH_TET_Dwarfs_TakeDriedCuredMeatFromCuringCabinet</defName>
+		<driverClass>TheEndTimes.JobDriver_TakeDriedCuredMeatFromCuringCabinet</driverClass>
+		<reportString>taking dry cured meat out of TargetA.</reportString>
+	</JobDef>
+
+</Defs>

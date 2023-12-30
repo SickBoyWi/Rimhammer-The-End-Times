@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef>
+		<defName>RH_TET_WoodenStakes</defName>
+		<label>Wooden Stakes</label>
+		<techLevel>Medieval</techLevel>
+		<description>Sharpened wooden stakes. Makes it difficult for pawns to pass quickly or safely. Will likely damage pawns crossing them.</description>
+		<graphicData>
+			<texPath>Things/Building/Security/RH_TET_Stakes/RH_TET_Stakes</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1.2,1.2)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+				<edgeTop>Damage/Edge</edgeTop>
+				<edgeBot>Damage/Edge</edgeBot>
+				<edgeLeft>Damage/Edge</edgeLeft>
+				<edgeRight>Damage/Edge</edgeRight>
+			</damageData>
+		</graphicData>
+		<uiIconPath>UI/Icons/Security/RH_TET_Stakes</uiIconPath>
+		<costList>
+			<WoodLog>15</WoodLog>
+		</costList>
+		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
+		<selectable>true</selectable>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>800</WorkToBuild>
+			<Beauty>-5</Beauty>
+			<TrapMeleeDamage>15</TrapMeleeDamage>
+			<TrapSpringChance>0.1</TrapSpringChance>
+			<Flammability>1</Flammability>
+			<Mass>25</Mass>
+		</statBases>
+		<altitudeLayer>Building</altitudeLayer>
+		<drawerType>RealtimeOnly</drawerType>
+		<stealable>false</stealable>
+		<rotatable>true</rotatable>
+		<tickerType>Normal</tickerType>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.35</fillPercent>
+		<pathCost>150</pathCost>
+		<constructEffect>ConstructWood</constructEffect>
+		<repairEffect>ConstructWood</repairEffect>
+		<pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<filthLeaving>Filth_RubbleBuilding</filthLeaving>
+		<designationHotKey>Misc6</designationHotKey>
+		<building>
+			<isTrap>true</isTrap>
+			<trapDestroyOnSpring>false</trapDestroyOnSpring>
+			<trapDamageCategory>Sharp</trapDamageCategory>
+			<ai_chillDestination>false</ai_chillDestination>
+			<expandHomeArea>false</expandHomeArea>
+		</building>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<category>Building</category>
+		<designationCategory>Security</designationCategory>
+		<thingCategories><li>BuildingsSecurity</li></thingCategories>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingClass>Building_TrapDamager</thingClass>
+	</ThingDef>
+
+</Defs>

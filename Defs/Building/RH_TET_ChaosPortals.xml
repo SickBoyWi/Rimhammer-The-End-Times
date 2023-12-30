@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<ThingDef Name="PortalBuildingBase" Abstract="True">
+		<category>Building</category>
+		<thingClass>Building</thingClass>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<repairEffect>Repair</repairEffect>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<filthLeaving>Filth_RubbleBuilding</filthLeaving>
+		<statBases>
+			<SellPriceFactor>0.70</SellPriceFactor>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="PortalBuildingBase">
+		<defName>RH_TET_ChaosPortal_Small</defName>
+		<label>chaos portal</label>
+		<soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+		<description>A portal to the realm of chaos. Allows chaos denizens to teleport from the realm of chaos.</description>
+		<thingClass>TheEndTimes.ChaosPortalSmall</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Chaos/RH_TET_Chaos_Portal_On</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>6</drawSize>
+		</graphicData>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<rotatable>false</rotatable>
+		<fillPercent>0.5</fillPercent>
+		<statBases>
+			<MaxHitPoints>7500</MaxHitPoints>
+			<Flammability>0.25</Flammability>
+		</statBases>
+		<pathCost>50</pathCost>
+		<blockWind>true</blockWind>
+		<tickerType>Normal</tickerType>
+		<passability>PassThroughOnly</passability>
+		<size>(3,5)</size>
+		<building>
+			<claimable>false</claimable>
+			<ai_combatDangerous>true</ai_combatDangerous>
+			<soundAmbient>RH_TET_ChaosPortalAmbient</soundAmbient>
+		</building>
+		<killedLeavings>
+			<BlocksMarble>175</BlocksMarble>
+			<ChunkSlagSteel>8</ChunkSlagSteel>
+			<Uranium>50</Uranium>
+		</killedLeavings>
+		<comps>
+			<li Class="CompProperties_HeatPusher">
+				<heatPerSecond>6</heatPerSecond>
+				<heatPushMaxTemperature>38</heatPushMaxTemperature>
+			</li>
+			<li Class="CompProperties_SpawnerFilth">
+				<filthDef>Filth_Vomit</filthDef>
+				<spawnCountOnSpawn>3</spawnCountOnSpawn>
+				<spawnMtbHours>.5</spawnMtbHours>
+				<spawnRadius>5</spawnRadius>
+			</li>
+			<li Class="CompProperties_Maintainable">
+				<ticksHealthy>60000</ticksHealthy>
+				<ticksNeedsMaintenance>40000</ticksNeedsMaintenance>
+				<damagePerTickRare>10</damagePerTickRare>
+			</li>
+			<li Class="CompProperties_FireOverlay">
+				<fireSize>2</fireSize>
+				<offset>(0,0,-1)</offset>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="PortalBuildingBase">
+		<defName>RH_TET_ChaosPortal_Great</defName>
+		<label>great chaos portal</label>
+		<soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+		<description>A massive portal to the realm of chaos. Allows chaos denizens to teleport from the realm of chaos in large numbers.</description>
+		<thingClass>TheEndTimes.ChaosPortalGreat</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Chaos/RH_TET_Chaos_Portal_Great</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>16</drawSize>
+		</graphicData>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<rotatable>false</rotatable>
+		<fillPercent>0.5</fillPercent>
+		<statBases>
+			<MaxHitPoints>15000</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<pathCost>50</pathCost>
+		<blockWind>false</blockWind>
+		<tickerType>Normal</tickerType>
+		<passability>PassThroughOnly</passability>
+		<size>(12,12)</size>
+		<building>
+			<claimable>false</claimable>
+			<ai_combatDangerous>true</ai_combatDangerous>
+			<soundAmbient>RH_TET_ChaosPortalAmbient</soundAmbient>
+		</building>
+		<killedLeavings>
+			<ChunkSlagSteel>15</ChunkSlagSteel>
+			<Uranium>200</Uranium>
+		</killedLeavings>
+		<comps>
+			<li Class="CompProperties_HeatPusher">
+				<heatPerSecond>15</heatPerSecond>
+				<heatPushMaxTemperature>38</heatPushMaxTemperature>
+			</li>
+			<li Class="CompProperties_SpawnerFilth">
+				<filthDef>Filth_Vomit</filthDef>
+				<spawnCountOnSpawn>50</spawnCountOnSpawn>
+				<spawnMtbHours>.25</spawnMtbHours>
+				<spawnRadius>15</spawnRadius>
+			</li>
+			<li Class="CompProperties_Maintainable">
+				<ticksHealthy>60000</ticksHealthy>
+				<ticksNeedsMaintenance>40000</ticksNeedsMaintenance>
+				<damagePerTickRare>10</damagePerTickRare>
+			</li>
+			<li Class="CompProperties_FireOverlay">
+				<fireSize>2</fireSize>
+				<offset>(0,0,-1)</offset>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>8</glowRadius>
+				<glowColor>(255,112,0,0)</glowColor>
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>

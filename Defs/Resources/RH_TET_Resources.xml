@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>RH_TET_Coal</defName>
+		<label>coal</label>
+		<description>A lump of dark, dirty coal. Can be used to fuel for forges, stoves, torches and campfires.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Coal</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<soundInteract>ChunkRock_Drop</soundInteract>
+		<soundDrop>ChunkRock_Drop</soundDrop>
+		<statBases>
+			<MarketValue>1.0</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Mass>0.4</Mass>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>2</deepCommonality>
+		<deepCountPerPortion>35</deepCountPerPortion>
+		<deepLumpSizeRange>
+			<min>15</min>
+			<max>50</max>
+		</deepLumpSizeRange>
+	</ThingDef>
+
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>RH_TET_AnimalFat</defName>
+		<label>animal fat</label>
+		<description>A lump animal fat. Will spoil. rather unpleasant to look at. Can be used to make candles.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/AnimalFat</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ingestible>
+			<foodType>AnimalProduct</foodType>
+			<ingestEffect>EatMeat</ingestEffect>
+			<ingestSound>RawMeat_Eat</ingestSound>
+			<tasteThought>AteRawFood</tasteThought>
+			<preferability>DesperateOnly</preferability>
+		</ingestible>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<Mass>0.06</Mass>
+			<MaxHitPoints>20</MaxHitPoints>
+			<DeteriorationRate>2.5</DeteriorationRate>
+			<Flammability>1.0</Flammability>
+			<Nutrition>0.01</Nutrition>
+			<FoodPoisonChanceFixedHuman>0.05</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>5</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+				<disableIfHatcher>true</disableIfHatcher>
+			</li>
+		</comps>
+		<tickerType>Normal</tickerType>
+		<thingCategories>
+			<li>AnimalProductRaw</li>
+		</thingCategories>
+	</ThingDef>
+
+</Defs>

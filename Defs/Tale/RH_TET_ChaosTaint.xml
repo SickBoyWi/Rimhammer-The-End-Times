@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TaleDef>
+		<defName>RH_TET_ChaosTaintRevealed</defName>
+		<label>chaos corruption revealed</label>
+		<taleClass>Tale_SinglePawnAndDef</taleClass>
+		<defSymbol>ILLNESS</defSymbol>
+		<type>Volatile</type>
+		<baseInterest>4</baseInterest>
+		<rulePack>
+			<rulesStrings>
+				<li>tale_noun->[PAWN_nameDef]'s body becoming corrupted</li>
+				<li>tale_noun->[PAWN_nameDef] being corrupted by chaos</li>
+				<li>image->[PAWN_nameFull] staggering through a field [circumstance_group]</li>
+				<li>image->[PAWN_nameFull] lying on the ground [circumstance_group]</li>
+				<li>image->[PAWN_nameFull] mindlessly removing [PAWN_possessive] clothes [circumstance_group]</li>
+				<li>circumstance_phrase->and sweating uncontrollably</li>
+				<li>circumstance_phrase->and shivering uncontrollably</li>
+				<li>circumstance_phrase->while both sweating and shivering</li>
+				<li>circumstance_phrase->with things moving under their skin</li>
+				<li>circumstance_phrase->while vomiting</li>
+				<li>circumstance_phrase->with a visible rash</li>
+				<li>desc_sentence->[Quantity_adjphrase] twisted [Animal] corpses surround the area.</li>
+				<li>desc_sentence->[PAWN_nameDef]'s clothes are falling apart.</li>
+				<li>desc_sentence->The sky is a chaotic [Color].</li>
+				<li>desc_sentence->[Quantity_adjphrase] twisted [Color] [TerrainFeature]s surround the scene.</li>
+				<li>desc_sentence->The scene takes place inside a twisted [TreeType] forest.</li>
+				<li>desc_sentence->[Quantity_adjphrase] dying [Animal]s lay on the ground.</li>
+			</rulesStrings>
+		</rulePack>
+	</TaleDef>
+
+</Defs>

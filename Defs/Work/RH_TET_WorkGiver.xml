@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<WorkGiverDef>
+		<defName>DoBillsStoveFurnace</defName>
+		<label>cook meals at stove furnace</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Cooking</workType>
+		<priorityInType>97</priorityInType>
+		<fixedBillGiverDefs>
+			<li>RH_TET_Stove</li>
+		</fixedBillGiverDefs>
+		<verb>cook</verb>
+		<gerund>cooking</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+</Defs>

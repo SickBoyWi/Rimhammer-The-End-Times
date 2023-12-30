@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>ProxyHeat</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<!-- RH_TET_Brazier -->
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Brazier"]/comps</xpath>
+					<success>Always</success>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName = "RH_TET_Brazier"]</xpath>
+						<value>
+							<comps/>
+						</value>
+					</nomatch>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Brazier"]/comps</xpath>
+					<value>
+						<li Class="ProxyHeat.CompProperties_TemperatureSource">
+							<radius>1.5</radius>
+							<tempOutcome>9</tempOutcome>
+							<dependsOnFuel>true</dependsOnFuel>
+							<maxTemperature>30</maxTemperature>
+							
+							<smeltSnowRadius>2.0</smeltSnowRadius>
+							<smeltSnowAtTemperature>4</smeltSnowAtTemperature>
+							<smeltSnowPower>0.001</smeltSnowPower>
+						</li>
+					</value>
+				</li>
+				<!-- RH_TET_Stove -->
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Stove"]/comps</xpath>
+					<success>Always</success>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName = "RH_TET_Stove"]</xpath>
+						<value>
+							<comps/>
+						</value>
+					</nomatch>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Stove"]/comps</xpath>
+					<value>
+						<li Class="ProxyHeat.CompProperties_TemperatureSource">
+							<radius>2.5</radius>
+							<tempOutcome>16</tempOutcome>
+							<dependsOnFuel>true</dependsOnFuel>
+							<maxTemperature>30</maxTemperature>
+							
+							<smeltSnowRadius>2.0</smeltSnowRadius>
+							<smeltSnowAtTemperature>4</smeltSnowAtTemperature>
+							<smeltSnowPower>0.001</smeltSnowPower>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

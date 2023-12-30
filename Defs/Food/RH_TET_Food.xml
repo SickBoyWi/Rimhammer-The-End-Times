@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="MealBase">
+		<defName>RH_TET_CookedPickling</defName>
+		<label>unpickled food</label>
+		<description>Meat or veggies that need to be pickled. This substance needs to pickle in a pickling crock before it becomes edible. Great for foods with a low shelf life, or foods that are getting close to expiring. Not good for foods that will last a long time, as this will reduce their shelf life down to one season once pickled in a pickling crock.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Food/Pickle</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<stackLimit>30</stackLimit>
+		<thingCategories>
+			<li>RH_TET_PreservedFoods</li>
+		</thingCategories>
+		<statBases>
+			<DeteriorationRate>1.0</DeteriorationRate>
+			<MarketValue>1</MarketValue>
+			<Mass>0.8</Mass>
+			<Flammability>0.2</Flammability>
+			<MaxHitPoints>60</MaxHitPoints>
+			<WorkToMake>300</WorkToMake>
+			<Nutrition>0.05</Nutrition>
+		</statBases>
+		<tickerType>Rare</tickerType>
+		<ingestible>
+			<preferability>DesperateOnly</preferability>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>5</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="MealBase">
+		<defName>RH_TET_CookedCure</defName>
+		<label>cooked cure</label>
+		<description>A cooked cure. This substance needs to cured in a curing pot before it becomes cured meat.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Food/Cure</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<stackLimit>30</stackLimit>
+		<statBases>
+			<DeteriorationRate>1.0</DeteriorationRate>
+			<MarketValue>1</MarketValue>
+			<Mass>0.8</Mass>
+			<Flammability>0.2</Flammability>
+			<MaxHitPoints>60</MaxHitPoints>
+			<WorkToMake>300</WorkToMake>
+			<Nutrition>0.05</Nutrition>
+		</statBases>
+		<tickerType>Rare</tickerType>
+		<ingestible>
+			<preferability>DesperateOnly</preferability>
+			<ingestEffect>EatMeat</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+		</ingestible>
+		<thingCategories>
+			<li>RH_TET_PreservedFoods</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>5</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<RecipeDef ParentName="CookMealBase">
+		<defName>RH_TET_CookPickling</defName>
+		<label>cook pickling</label>
+		<description>Cook food to be pickled.</description>
+		<jobString>Cooking pickled food.</jobString>
+		<workAmount>400</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>FoodRaw</li>
+					</categories>
+				</filter>
+				<count>0.5</count>
+			</li>
+		</ingredients>
+		<products>
+			<RH_TET_CookedPickling>10</RH_TET_CookedPickling>
+		</products>
+		<recipeUsers>
+			<li>ElectricStove</li>
+			<li>FueledStove</li>
+			<li>RH_TET_Stove</li>
+		</recipeUsers>
+		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>RH_TET_FoodPreservation</researchPrerequisite>
+		<defaultIngredientFilter>
+			<categories>
+				<li>FoodRaw</li>
+			</categories>
+			<disallowedThingDefs>
+				<li>RH_TET_CookedCure</li>
+				<li>RH_TET_CookedPickling</li>
+				<li>RH_TET_PickledFood</li>
+				<li>RH_TET_CuredMeat</li>
+				<li>RH_TET_DriedCuredMeat</li>
+			</disallowedThingDefs>
+		</defaultIngredientFilter>
+	</RecipeDef>
+  
+	<RecipeDef ParentName="CookMealBase">
+		<defName>RH_TET_CookCure</defName>
+		<label>cook meat cure</label>
+		<description>Cook a cure for curing meat.</description>
+		<jobString>Cooking cured meat.</jobString>
+		<workAmount>400</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+					</categories>
+				</filter>
+				<count>0.5</count>
+			</li>
+		</ingredients>
+		<defaultIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+			<disallowedThingDefs>
+				<li>RH_TET_CookedCure</li>
+				<li>RH_TET_CookedPickling</li>
+				<li>RH_TET_PickledFood</li>
+				<li>RH_TET_CuredMeat</li>
+				<li>RH_TET_DriedCuredMeat</li>
+			</disallowedThingDefs>
+		</defaultIngredientFilter>
+		<products>
+			<RH_TET_CookedCure>10</RH_TET_CookedCure>
+		</products>
+		<recipeUsers>
+			<li>ElectricStove</li>
+			<li>FueledStove</li>
+			<li>RH_TET_Stove</li>
+		</recipeUsers>
+		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>RH_TET_FoodPreservation</researchPrerequisite>
+	</RecipeDef>
+  
+	<RecipeDef ParentName="CookMealBase">
+		<defName>RH_TET_CookPicklingBulk</defName>
+		<label>cook bulk pickling</label>
+		<description>Cook food to be pickled in bulk.</description>
+		<jobString>Cooking bulk pickled food.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>1500</workAmount>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>FoodRaw</li>
+					</categories>
+				</filter>
+				<count>2.0</count>
+			</li>
+		</ingredients>
+		<products>
+			<RH_TET_CookedPickling>40</RH_TET_CookedPickling>
+		</products>
+		<recipeUsers>
+			<li>ElectricStove</li>
+			<li>FueledStove</li>
+			<li>RH_TET_Stove</li>
+		</recipeUsers>
+		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>RH_TET_FoodPreservationBulk</researchPrerequisite>
+		<defaultIngredientFilter>
+			<categories>
+				<li>FoodRaw</li>
+			</categories>
+			<disallowedThingDefs>
+				<li>RH_TET_CookedCure</li>
+				<li>RH_TET_CookedPickling</li>
+				<li>RH_TET_PickledFood</li>
+				<li>RH_TET_CuredMeat</li>
+				<li>RH_TET_DriedCuredMeat</li>
+			</disallowedThingDefs>
+		</defaultIngredientFilter>
+	</RecipeDef>
+  
+	<RecipeDef ParentName="CookMealBase">
+		<defName>RH_TET_CookCureBulk</defName>
+		<label>cook bulk meat cure</label>
+		<description>Cook a bulk cure for curing meat.</description>
+		<jobString>Cooking cured meat in bulk.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>1500</workAmount>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+					</categories>
+				</filter>
+				<count>2.0</count>
+			</li>
+		</ingredients>
+		<defaultIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+			<disallowedThingDefs>
+				<li>RH_TET_CookedCure</li>
+				<li>RH_TET_CookedPickling</li>
+				<li>RH_TET_PickledFood</li>
+				<li>RH_TET_CuredMeat</li>
+				<li>RH_TET_DriedCuredMeat</li>
+			</disallowedThingDefs>
+		</defaultIngredientFilter>
+		<products>
+			<RH_TET_CookedCure>40</RH_TET_CookedCure>
+		</products>
+		<recipeUsers>
+			<li>ElectricStove</li>
+			<li>FueledStove</li>
+			<li>RH_TET_Stove</li>
+		</recipeUsers>
+		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>RH_TET_FoodPreservationBulk</researchPrerequisite>
+	</RecipeDef>
+  
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>RH_TET_PickledFood</defName>
+		<label>pickled food</label>
+		<description>Preserved pickled food. Tastes good. It lasts one season without refrigeration. Good for traveling.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<thingCategories>
+			<li>RH_TET_PreservedFoods</li>
+			<li>PlantFoodRaw</li>
+		</thingCategories>
+		<graphicData>
+			<texPath>Things/Item/Food/Pickled/RH_TET_PickledFood</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MarketValue>2.5</MarketValue>
+			<Mass>0.02</Mass>
+			<Flammability>0.5</Flammability>
+			<DeteriorationRate>1.5</DeteriorationRate>
+			<Nutrition>0.05</Nutrition>
+			<FoodPoisonChanceFixedHuman>0.01</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<ingestible>
+			<foodType>VegetableOrFruit</foodType>
+			<preferability>RawTasty</preferability>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+			<optimalityOffsetHumanlikes>16</optimalityOffsetHumanlikes>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>48</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Ingredients"/>
+			<li Class="CompProperties_FoodPoisonable"/>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>RH_TET_CuredMeat</defName>
+		<label>cured meat</label>
+		<description>Meat preserved by curing. Tastes ok. It lasts longer than meat otherwise would without refrigeration. Cured meat will last one season. Drying cured meat in a curing cabinet will make it last much longer.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<thingCategories>
+			<li>AnimalProductRaw</li>
+			<li>RH_TET_PreservedFoods</li>
+		</thingCategories>
+		<graphicData>
+			<texPath>Things/Item/Food/Cured/RH_TET_CuredMeat</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MarketValue>2.2</MarketValue>
+			<Mass>0.02</Mass>
+			<Flammability>0.7</Flammability>
+			<DeteriorationRate>1.5</DeteriorationRate>
+			<Nutrition>0.05</Nutrition>
+			<FoodPoisonChanceFixedHuman>0.01</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<ingestible>
+			<foodType>AnimalProduct</foodType>
+			<preferability>RawTasty</preferability>
+			<ingestEffect>EatMeat</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+			<optimalityOffsetHumanlikes>6</optimalityOffsetHumanlikes>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>18</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Ingredients"/>
+			<li Class="CompProperties_FoodPoisonable"/>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>RH_TET_DriedCuredMeat</defName>
+		<label>dried cured meat</label>
+		<description>Meat preserved by curing and drying. Tastes amazing. It lasts significantly longer than raw or even cured meat. Great for traveling. Not poisonable. Has a shelf life of 75 days.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<thingCategories>
+			<li>RH_TET_PreservedFoods</li>
+			<li>AnimalProductRaw</li>
+		</thingCategories>
+		<graphicData>
+			<texPath>Things/Item/Food/Cured/RH_TET_CuredDriedMeat</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MarketValue>4</MarketValue>
+			<Mass>0.02</Mass>
+			<Flammability>0.7</Flammability>
+			<DeteriorationRate>1.2</DeteriorationRate>
+			<Nutrition>0.05</Nutrition>
+			<FoodPoisonChanceFixedHuman>0.0</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<ingestible>
+			<foodType>AnimalProduct</foodType>
+			<preferability>RawTasty</preferability>
+			<tasteThought>AteFineMeal</tasteThought>
+			<ingestEffect>EatMeat</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+			<optimalityOffsetHumanlikes>16</optimalityOffsetHumanlikes>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>75</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Ingredients"/>
+		</comps>
+	</ThingDef>
+
+</Defs>

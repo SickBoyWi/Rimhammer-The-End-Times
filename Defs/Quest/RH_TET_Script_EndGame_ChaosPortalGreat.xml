@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<QuestScriptDef>
+		<defName>RH_TET_EndGame_ChaosPortalGreat</defName>
+		<autoAccept>true</autoAccept>
+		<defaultChallengeRating>6</defaultChallengeRating>
+		<isRootSpecial>true</isRootSpecial>
+		<questNameRules>
+			<rulesStrings>
+				<li>questName->Great Chaos Portal</li>
+			</rulesStrings>
+		</questNameRules>
+		<questDescriptionRules>
+			<rulesStrings>
+				<li>questDescription-> A black winged messenger bird arrived today with grave tidings.\n\nThe message reveals that a massive chaos portal has opened, and contains the location of the portal.\n\nThe portal is currently inactive. You'll have to travel to the location, and destroy it before it opens and overruns the entire planet with foul chaos abominations.\n\nIf you can fend off the creatures spawning from the portal, then you will have saved the world.\n\nA quest like this is not to be taken lightly. The journey will be long, and the enemies will be many. Prepare well, as long as it takes, before heading out to destroy this threat.</li>
+			</rulesStrings>
+		</questDescriptionRules>
+		<root Class="QuestNode_Sequence">
+			<nodes>
+				<li Class="QuestNode_QuestUnique">
+					<tag>RH_TET_ChaosPortalGreat</tag>
+				</li>
+        
+				<li Class="QuestNode_EndGame_ShipEscape_FindShipTile">
+					<storeAs>tile</storeAs>
+				</li>
+				<li Class="QuestNode_GenerateWorldObject">
+					<def>RH_TET_ChaosPortalGreat</def>
+					<storeAs>chaosPortalGreat</storeAs>
+				</li>
+				<li Class="QuestNode_SpawnWorldObjects">
+					<worldObjects>$chaosPortalGreat</worldObjects>
+					<tile>$tile</tile>
+				</li>
+				<li Class="QuestNode_End">
+					<inSignal>chaosPortalGreat.Destroyed</inSignal>
+					<outcome>Success</outcome>
+				</li>
+			</nodes>
+		</root>
+	</QuestScriptDef>
+  
+	<WorldObjectDef>
+		<defName>RH_TET_ChaosPortalGreat</defName>
+		<label>great chaos portal</label>
+		<description>The location of a massive chaos portal that could potentially destory the world.</description>
+		<worldObjectClass>MapParent</worldObjectClass>
+		<texture>World/Quests/ChaosPortalGreat</texture>
+		<expandingIcon>true</expandingIcon>
+		<expandingIconTexture>World/Quests/Expanding/ChaosPortalGreat</expandingIconTexture>
+		<expandingIconPriority>50</expandingIconPriority>
+		<expandMore>true</expandMore>
+		<IncidentTargetTags>
+			<li>Map_TempIncident</li>
+		</IncidentTargetTags>
+		<mapGenerator>RH_TET_ChaosPortalGreat</mapGenerator>
+		<canBePlayerHome>false</canBePlayerHome>
+		<comps>
+			<li Class="TheEndTimes.WorldObjectCompProperties_ChaosPortalGreat"/>
+			<li Class="WorldObjectCompProperties_TimedForcedExit"/>
+			<li Class="WorldObjectCompProperties_FormCaravan"/>
+			<li Class="WorldObjectCompProperties_Abandon"/>
+		</comps>
+	</WorldObjectDef>
+
+	<IncidentDef ParentName="GiveQuestBase">
+		<defName>RH_TET_ChaosPortalGreatJourneyOffer</defName>
+		<label>great chaos portal</label>
+		<letterLabel>Great chaos portal</letterLabel>
+		<questScriptDef>RH_TET_EndGame_ChaosPortalGreat</questScriptDef>
+		<baseChance>0</baseChance><!-- given by a special storyteller comp -->
+	</IncidentDef>
+
+	<MapGeneratorDef ParentName="MapCommonBase">
+		<defName>RH_TET_ChaosPortalGreat</defName>
+		<genSteps>
+			<li>RocksFromGrid</li>
+			<li>RH_TET_ChaosPortalGreat</li>
+		</genSteps>
+	</MapGeneratorDef>
+  
+	<MapGeneratorDef>
+		<defName>RH_TET_Dwarfs_EmptyMap</defName>
+		<genSteps>
+			<li>Terrain</li>
+			<li>Fog</li>
+		</genSteps>
+	</MapGeneratorDef>
+
+	<GenStepDef>
+		<defName>RH_TET_ChaosPortalGreat</defName>
+		<order>400</order>
+		<genStep Class="TheEndTimes.GenStep_ChaosPortalGreat">
+		</genStep>
+	</GenStepDef>
+  
+</Defs>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<ThingDef ParentName="BuildingBase" Name="RH_TET_BuildingBase" Abstract="True">
+	</ThingDef>
+  
+  
+	<ThingDef ParentName="FurnitureBase" Name="RH_TET_FurnitureBase" Abstract="True">
+	</ThingDef>
+  
+	<ThingDef ParentName="FurnitureWithQualityBase" Name="RH_TET_FurnitureWithQualityBase" Abstract="True">
+	</ThingDef>
+  
+  
+	<ThingDef ParentName="ArtableFurnitureBase" Name="RH_TET_ArtableFurnitureBase" Abstract="True">
+	</ThingDef>
+
+
+	<ThingDef ParentName="BenchBase" Name="RH_TET_BenchBase" Abstract="True">
+	</ThingDef>
+  
+</Defs>

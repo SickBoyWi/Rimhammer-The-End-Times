@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchTabDef>
+		<defName>RH_TET_Tab</defName>
+		<label>The End Times</label>
+	</ResearchTabDef>
+
+	<ResearchProjectDef Name="RH_TET_Research" Abstract="True">
+		<techLevel>Medieval</techLevel>
+		<tab>RH_TET_Tab</tab>
+	</ResearchProjectDef>
+
+	<ResearchProjectTagDef>
+		<defName>RH_TET_ProjectTag</defName>
+	</ResearchProjectTagDef>
+
+	<!-- Row 1 -->
+
+	<ResearchProjectDef ParentName="RH_TET_Research">
+		<defName>RH_TET_Stove</defName>
+		<label>Fueled Furnace Stove</label>
+		<description>Unlocks the ability to build a fueled heater that can also be used to cook meals.</description>
+		<baseCost>600</baseCost>
+		<tags>
+			<li>RH_TET_ProjectTag</li>
+		</tags>
+		<researchViewX>0</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_Research">
+		<defName>RH_TET_HeatLight</defName>
+		<label>Light and Warmth</label>
+		<description>Unlocks the ability to build a brazier that heats and lights a space much better than a torch, and is tougher. Also allows for constrcution of wall torches and candles.</description>
+		<baseCost>350</baseCost>
+		<tags>
+			<li>RH_TET_ProjectTag</li>
+		</tags>
+		<researchViewX>0</researchViewX>
+		<researchViewY>.75</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_Research">
+		<defName>RH_TET_FoodPreservation</defName>
+		<label>Food Preservation</label>
+		<description>Allows for creation of pickled and cured foods, in order to extend the shelf life of both vegetables and meats. \n\n Unlocks a pickling crock for pickling. Unlocks a curing pot and curing cabinet for curing meats. \n\n To use: At a cook table, make a cooked cure or cooked pickling. Take that, and put it in the pickling crock or curing pot. Wait until it's done, and take it out. If it was cured meat, it can then be put in the drying cabinet. \n\n Pickling: Pickled food lasts one season without refrigeration. It is good for traveling. \n\n Curing: Curing is a two stage process to completion, but the product is usable after each step, and increases shelf life after each step. Cured meat lasts longer than meat otherwise would without refrigeration. Cured meat will last one season. Drying cured meat in a curing cabinet is the second step; it will make it last one year. Dried cured meat also tastes amazing, so it'll give your colonists a mood boost.</description>
+		<baseCost>500</baseCost>
+		<tags>
+			<li>RH_TET_ProjectTag</li>
+		</tags>
+		<researchViewX>0</researchViewX>
+		<researchViewY>1.5</researchViewY>
+	</ResearchProjectDef>
+
+	<!-- ROW 2 -->
+
+	<ResearchProjectDef ParentName="RH_TET_Research">
+		<defName>RH_TET_FoodPreservationBulk</defName>
+		<label>Bulk Food Preservation</label>
+		<description>Allows for construction of larger food preservation vats, so that you can preserve larger quantities of food at one time.</description>
+		<baseCost>350</baseCost>
+		<tags>
+			<li>RH_TET_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_FoodPreservation</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>1.5</researchViewY>
+	</ResearchProjectDef>
+</Defs>

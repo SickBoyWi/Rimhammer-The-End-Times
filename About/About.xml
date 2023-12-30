@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Rimhammer - The End Times</name>
+	<author>SickBoyWi</author>
+	<supportedVersions><li>1.3</li><li>1.4</li></supportedVersions>
+	<packageId>SickBoyWi.TheEndTimes.TheEndTimes</packageId>
+	<description>
+NOTE: AS OF 1.4: THIS MOD NO LONGER AFFECTS GAME TECHNOLOGY LEVEL. IT IS RECOMMENDED THAT YOU USE THE RIMEDIEVAL MOD TO ACCOMPLISH THAT EFFECT.
+
+
+Discord link: https://discord.gg/UCmQbCT
+
+This mod is intended to add Warhammer into your RimWorld experience. This mod, and the extensions that come after it, will provide a high medieval fantasy version of RimWorld set in the old Warhammer universe.
+
+The Rimhammer mods should be placed at the bottom of your mod list. Place the base Rimhammer - The End Times mod at the bottom, then put the race/faction mods under it (order doesn't matter for the race faction mods, as long as they are loaded after the base Rimhammer mod).
+
+This is the base mod for the Rimhammer mod series, and sets up the groundwork for the other mod extensions that will arrive in the future such as the races. 
+
+Things that this mod currently does:
+
+Adds medieval and Warhammer fantasy based stuff:
+-Adds coal as a mineable resource that can be used to fuel stoves, forges, and such.
+-Adds a furnace stove that can be used to cook at, as well as keep a room warm.
+-Adds a floor brazier that can be used for light, and heat.
+-Adds wall sconces for lights, to keep the rooms looking better.s
+-Adds two methods of food preservation: pickling (for meat and veggies) and curing (for meats, significantly extends shelf life of meats, but requires some effort). 
+-Replaces the modern electric smithy with a wood/coal fueled smithy
+-Adds chaos monsters as a new hidden faction that will attack your colony. Current list: Chaos Spawn, Razorgor, Jabberslythe, and Tuskgor.
+
+-Adds a new victory quest: Great Chaos Portal Journey. Journey to the great chaos portal, and destory it to save the old world (and win the game)! Finally a medieval game win condition!
+-Adds new quests: Nearby Jabberslythe Lair that needs to be cleared out, nearby Small Chaos Portal to destroy.
+
+-Adds a few magical items: Healing Potion, Wand of Resurrection, Staff of Burning Death
+
+-Adds Chaos Wastes biome. Makes all non ice sheet tiles around the north and south poles into Chaos Wastes biome rather than what they'd be otherwise. There are settings built in to control how far south the chaos wastes extend.
+
+-Adds a map event called the Chaos Storm. While a Chaos Storm is raging, any pawn not in shelter will have a new health condition applied, which increases the more they are exposed to it. The new health condition is Chaos Corruption. As the Chaos Corruption level increases, the likelihood that the pawn (non-animal) will go into a Berserk mental state rises. If the Chaos Corruption level becomes high enough, the pawn may turn into an abomination; the Chaos Spawn. If that happens: the pawn is considered dead, and can’t be redeemed. 
+
+Pawns that see a Chaos Spawn will have a negative mood penalty applied; however, pawns that see a dead Chaos Spawn will get a positive mood boost. If a pawn somehow reaches a Chaos Corruption level of 100% without becoming a Chaos Spawn, that pawn will die. 
+
+Eating meat from a Chaos Spawn will increase a pawn's Chaos Corruption level, potentially causing the Chaos Corruption issues mentioned above, and cause negative mood modifiers. 
+
+Animals exposed to Chaos Corruption may go maddened, but will not turn into a Chaos Spawn. 
+
+-----------------------------------------
+
+FUTURE PLANS
+
+Implement the various races present in the Warhammer Fantasy world.
+
+I will try to add all the races from Warhammer as playable races, with loads of extras and themed items/quests: Lizardmen, Orcs and Goblins, High Elves, Dark Elves, Daemons of Chaos, Chaos Mortals, Skaven, The Empire, Bretonnia, and so on. The human factions may be combined into one release. We may even add a few of the lost races like the Fimir if we get far enough. We will be adding magic, beast riding, and etc as well. Every race will have their own special attributes/effects that reflect how they are in the Warhammer universe.	
+
+-----------------------------------------
+
+Discord link: https://discord.gg/UCmQbCT
+
+Discuss this at Ludeon: https://ludeon.com/forums/index.php?topic=47626.0
+
+Buy me a coffee: https://ko-fi.com/sickboywi
+
+If you'd like to speed up the process of release, please consider supporting me on Patreon. The more support I get, the more motivated I will be to create more races/factions. https://www.patreon.com/SickBoyWI
+
+This mod took many, many hours of work. Special thanks to the Lord of the Rims series for inspiration, and for some great examples to get me going. Also, special thanks to the people at the Ludeon forums who answered my programming/config questions. This series will likely not be released fast. I'm one person, and the amount of work involved is significant. This first mod took easily over forty hours of work.
+
+Super special thanks to Discord users "Dino's Bar and Grill" for the forge/anvil texture, Rebelrot for the super sweet chaos spawn and razorgor images, and leugimimi for patching several popular mods to work with this mod!!
+	</description>
+</ModMetaData>

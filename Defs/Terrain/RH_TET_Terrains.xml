@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TerrainDef ParentName="NaturalTerrainBase">
+		<defName>RH_TET_ChaosWastesSoil</defName>
+		<label>corrupted wasteland soil</label>
+		<texturePath>Surfaces/TET_ChaosWastesSoil</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>340</renderPrecedence>
+		<pathCost>2</pathCost>
+		<statBases>
+			<Beauty>-1</Beauty>
+			<Cleanliness>-1</Cleanliness>
+		</statBases>
+		<scatterType>Rocky</scatterType>
+		<affordances>
+			<li>Light</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+			<li>GrowSoil</li>
+			<li>Diggable</li>
+		</affordances>
+		<generatedFilth>Filth_Dirt</generatedFilth>
+		<fertility>.35</fertility>
+		<takeFootprints>True</takeFootprints>
+		<tags>
+			<li>Soil</li>
+		</tags>
+	</TerrainDef>
+
+	<TerrainDef ParentName="NaturalTerrainBase">
+		<defName>RH_TET_ChaosWastesSoilRich</defName>
+		<label>wasteland soil</label>
+		<texturePath>Surfaces/TET_ChaosWastesSoilRich</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>335</renderPrecedence>
+		<pathCost>2</pathCost>
+		<statBases>
+			<Beauty>-1</Beauty>
+			<Cleanliness>-1</Cleanliness>
+		</statBases>
+		<affordances>
+			<li>Light</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+			<li>GrowSoil</li>
+			<li>Diggable</li>
+		</affordances>
+		<generatedFilth>Filth_Dirt</generatedFilth>
+		<fertility>.7</fertility>
+		<takeFootprints>True</takeFootprints>
+		<tags>
+			<li>Soil</li>
+		</tags>
+	</TerrainDef>
+
+	<TerrainDef ParentName="NaturalTerrainBase">
+		<defName>RH_TET_ChaosWastesGravel</defName>
+		<label>rocky gravel</label>
+		<texturePath>Surfaces/TET_ChaosWastesGravel</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>320</renderPrecedence>
+		<pathCost>2</pathCost>
+		<statBases>
+			<Beauty>-1</Beauty>
+			<Cleanliness>-1</Cleanliness>
+		</statBases>
+		<scatterType>Rocky</scatterType>
+		<affordances>
+			<li>Light</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+			<li>GrowSoil</li>
+			<li>Diggable</li>
+		</affordances>
+		<generatedFilth>Filth_Dirt</generatedFilth>
+		<fertility>0.0</fertility>
+		<takeFootprints>True</takeFootprints>
+	</TerrainDef>
+
+	<TerrainDef ParentName="NaturalTerrainBase">
+		<defName>RH_TET_ChaosWastesSand</defName>
+		<label>sandy dead soil</label>
+		<texturePath>Surfaces/TET_ChaosWastesSand</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>310</renderPrecedence>
+		<pathCost>2</pathCost>
+		<statBases>
+			<Beauty>-1</Beauty>
+			<Cleanliness>-1.5</Cleanliness>
+		</statBases>
+		<scatterType>Rocky</scatterType>
+		<affordances>
+			<li>Light</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+			<li>GrowSoil</li>
+			<li>Diggable</li>
+		</affordances>
+		<generatedFilth>Filth_Sand</generatedFilth>
+		<fertility>0.0</fertility>
+		<takeFootprints>True</takeFootprints>
+	</TerrainDef>
+
+</Defs>
