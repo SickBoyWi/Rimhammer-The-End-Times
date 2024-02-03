@@ -197,7 +197,7 @@
 			<lifeExpectancy>1500</lifeExpectancy>
 			<trainability>Advanced</trainability>
 			<manhunterOnDamageChance>1</manhunterOnDamageChance>
-			<manhunterOnTameFailChance>0.025</manhunterOnTameFailChance>
+			<manhunterOnTameFailChance>0.95</manhunterOnTameFailChance>
 			<lifeStageAges>
 				<li>
 					<def>RH_TET_Young</def>
