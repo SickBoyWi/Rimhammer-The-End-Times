@@ -13,7 +13,7 @@
 			<leatherDef>Leather_Plain</leatherDef>
 			<wildness>0.35</wildness>
 			<roamMtbDays>2</roamMtbDays>
-			<trainability>Intermediate</trainability>
+			<trainability>None</trainability>
 			<nuzzleMtbHours>100</nuzzleMtbHours>
 			<meatLabel>horse meat</meatLabel>
 			<manhunterOnDamageChance>0.1</manhunterOnDamageChance>
