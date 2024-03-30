@@ -51,7 +51,7 @@ namespace TheEndTimes
             {
                 return true;
             }
-            Log.Warning("Scatterer " + this.ToString() + " could not find cell to generate at.", false);
+            Log.Warning("Scatterer " + this.ToString() + " could not find cell to generate at.");
             return false;
         }
 

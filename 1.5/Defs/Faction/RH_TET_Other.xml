@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef ParentName="FactionBase">
+		<defName>RH_TET_Outcasts</defName>
+		<label>outcast band</label>
+		<description>A loose confederation of outcast gangs who've agreed to mostly fight outsiders instead of fighting each other.\n\Outcasts don't gnerally sow, they don't build much, and they rarely trade. Driven by a blood-and-honor culture that values personal strength and ruthlessness, they enrich themselves by raiding and robbing their more productive neighbors.\n\nTheir ranks are made up of many races, and they accept any one willing to submit to the current boss, and do violence.</description>
+		<pawnSingular>outcast</pawnSingular>
+		<pawnsPlural>outcasts</pawnsPlural>
+		<listOrderPriority>10</listOrderPriority>
+		<settlementGenerationWeight>1</settlementGenerationWeight>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<maxCountAtGameStart>1</maxCountAtGameStart>
+		<canMakeRandomly>true</canMakeRandomly>
+		<canSiege>true</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<leaderTitle>boss</leaderTitle>
+		<factionIconPath>World/outcasts</factionIconPath>
+		<colorSpectrum>
+			<li>(0.45, 0.05, 0.05)</li>
+			<li>(0.80, 0.25, 0.05)</li>
+		</colorSpectrum>
+		<permanentEnemy>true</permanentEnemy>
+		<factionNameMaker>NamerFactionPirate</factionNameMaker>
+		<settlementNameMaker>NamerSettlementPirate</settlementNameMaker>
+		<allowedCultures><li>RH_TET_Outcasts</li></allowedCultures>
+		<techLevel>Medieval</techLevel>
+		<caravanTraderKinds>
+			<li>Caravan_Outlander_BulkGoods</li>
+			<li>Caravan_Outlander_CombatSupplier</li>
+			<li>Caravan_Outlander_Exotic</li>
+			<li>Caravan_Outlander_PirateMerchant</li>
+		</caravanTraderKinds>
+		<allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+		<raidCommonalityFromPointsCurve>
+			<points>
+				<li>(0, 1)</li><!--Constant 1 at all points levels-->
+			</points>
+		</raidCommonalityFromPointsCurve>
+		<raidLootMaker>RH_TET_OutcastsRaidLootMaker</raidLootMaker>
+		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority IgnoreIfNoMatchingField="True">89</configurationListOrderPriority>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Tribal</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		<!-- OUT FOR 1.4 <geneticVariance>0.8</geneticVariance> -->
+		<maxPawnCostPerTotalPointsCurve>
+			<points>
+				<li>(0,35)</li>
+				<li>(70, 50)</li>
+				<li>(700, 100)</li>
+				<li>(1300, 150)</li>
+				<li>(100000, 10000)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+		<pawnGroupMakers>
+			<li>
+				<!-- Normal fights, ranged with melee mix-ins -->
+				<kindDef>Combat</kindDef>
+				<commonality>100</commonality>
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<options>
+					<Tribal_Penitent>5</Tribal_Penitent>
+					<Tribal_Warrior>5</Tribal_Warrior>
+					<Tribal_Archer>10</Tribal_Archer>
+					<Tribal_Hunter>10</Tribal_Hunter>
+					<Tribal_HeavyArcher>10</Tribal_HeavyArcher>
+					<Tribal_Berserker>5</Tribal_Berserker>
+					<Tribal_ChiefRanged>3</Tribal_ChiefRanged>
+					<Tribal_ChiefMelee>1.5</Tribal_ChiefMelee>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, ranged only -->
+				<kindDef>Combat</kindDef>
+				<commonality>60</commonality>
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<options>
+					<Tribal_Archer>10</Tribal_Archer>
+					<Tribal_Hunter>10</Tribal_Hunter>
+					<Tribal_HeavyArcher>10</Tribal_HeavyArcher>
+					<Tribal_ChiefRanged>5</Tribal_ChiefRanged>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, melee only -->
+				<kindDef>Combat</kindDef>
+				<commonality>60</commonality>
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<options>
+					<Tribal_Penitent>10</Tribal_Penitent>
+					<Tribal_Warrior>10</Tribal_Warrior>
+					<Tribal_Berserker>10</Tribal_Berserker>
+					<Tribal_ChiefMelee>5</Tribal_ChiefMelee>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, explosives with ranged mix-ins -->
+				<kindDef>Combat</kindDef>
+				<commonality>15</commonality>
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<options>
+					<Tribal_Berserker>10</Tribal_Berserker>
+					<Tribal_HeavyArcher>10</Tribal_HeavyArcher>
+					<Tribal_ChiefRanged>5</Tribal_ChiefRanged>
+				</options>
+			</li>
+			<li>
+				<!-- Base defense, mainly ranged with melee mix-ins -->
+				<kindDef>Settlement</kindDef>
+				<options>
+					<Tribal_Warrior>5</Tribal_Warrior>
+					<Tribal_Archer>10</Tribal_Archer>
+					<Tribal_Hunter>10</Tribal_Hunter>
+					<Tribal_HeavyArcher>10</Tribal_HeavyArcher>
+					<Tribal_Berserker>10</Tribal_Berserker>
+					<Tribal_ChiefRanged>5</Tribal_ChiefRanged>
+				</options>
+			</li>
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<RH_TET_OutcastTrader>1</RH_TET_OutcastTrader>
+				</traders>
+				<carriers>
+					<Muffalo>6</Muffalo>
+				</carriers>
+				<guards>
+					<Tribal_Penitent>5</Tribal_Penitent>
+					<Tribal_Warrior>5</Tribal_Warrior>
+					<Tribal_Archer>10</Tribal_Archer>
+					<Tribal_Hunter>10</Tribal_Hunter>
+					<Tribal_HeavyArcher>10</Tribal_HeavyArcher>
+					<Tribal_Berserker>5</Tribal_Berserker>
+				</guards>
+			</li>
+		</pawnGroupMakers>
+		<settlementTexturePath>World/outcasts</settlementTexturePath>
+	</FactionDef>
+ 
+	<ThingSetMakerDef>
+		<defName>RH_TET_OutcastsRaidLootMaker</defName>
+		<root Class="ThingSetMaker_MarketValue">
+			<fixedParams>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+						<li>MedicineHerbal</li>
+						<li>ComponentIndustrial</li>
+						<li>Pemmican</li>
+					</thingDefs>
+				</filter>
+			</fixedParams>
+		</root>
+	</ThingSetMakerDef>
+  
+	<CultureDef>
+		<defName>RH_TET_Outcasts</defName>
+		<label>outcasts</label>
+		<description>The culture of those who have been shunned by the good folk of the world. Forced to resort to piracy, theft, raids, and other degenerate acts for their crimes against good folk.</description>
+		<pawnNameMaker>NamerPersonCorunan</pawnNameMaker>
+		<ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoCorunan</ideoNameMaker>
+		<deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityCorunan</deityNameMaker>
+		<deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerCorunan</deityTypeMaker>
+		<festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalCorunan</festivalNameMaker>
+		<leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">LeaderTitleMaker_Corunan</leaderTitleMaker>
+		<allowedPlaceTags>
+			<li>OriginTribal</li>
+		</allowedPlaceTags>
+		<iconPath>World/WorldObjects/Expanding/Village</iconPath>
+		<iconColor>(0.80, 0.25, 0.05)</iconColor>
+		<preferredWeaponClasses>
+			<noble>Neolithic</noble>
+			<despised>Ultratech</despised>
+		</preferredWeaponClasses>
+		<thingStyleCategories>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<category>Totemic</category>
+				<priority>2</priority>
+			</li>
+		</thingStyleCategories>
+		<styleItemTags>
+			<li>
+				<tag>Tribal</tag>
+				<baseWeight>1</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li>
+				<tag>NoBeard</tag>
+				<baseWeight>10</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li>
+				<tag>BeardTribal</tag>
+				<baseWeight>0.3</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li>
+				<tag>TattooFaceTribal</tag>
+				<baseWeight>0.4</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li>
+				<tag>TattooBodyTribal</tag>
+				<baseWeight>0.4</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li>
+				<tag>NoTattoo</tag>
+				<baseWeight>1</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+		</styleItemTags>
+	</CultureDef>
+  
+</Defs>

@@ -46,4 +46,5 @@ D:\BackUp\Modding\RimWorld\1.4\Rimhammer-The-End-Times1.4\Source\TheEndTimes\obj
 D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times\1.4\Assemblies\TheEndTimes.dll
 D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times\Source\TheEndTimes\obj\Debug\TheEndTimes.csprojAssemblyReference.cache
 D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times\Source\TheEndTimes\obj\Debug\TheEndTimes.csproj.CoreCompileInputs.cache
+D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times\1.5\Assemblies\TheEndTimes.dll
 D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times\Source\TheEndTimes\obj\Debug\TheEndTimes.dll

@@ -126,7 +126,9 @@ namespace TheEndTimes
                         //CompTargetEffect_Berserk berserker = new CompTargetEffect_Berserk();
                         //berserker.DoEffectOn(pawn, pawn);
 
-                        pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, "RH_TET_Reason_ChaosTaintBerserk".Translate(), true, false, (Pawn)null, false);
+                        pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, "RH_TET_Reason_ChaosTaintBerserk".Translate(), 
+                            true, true, 
+                            false, (Pawn)null);
 
                         // Send a message to the user about this having happened.
                         Messages.Message("RH_TET_PawnSuccumbedToChaos_Berserk".Translate(pawn).CapitalizeFirst(), pawn, MessageTypeDefOf.NegativeHealthEvent, false);
@@ -149,7 +151,8 @@ namespace TheEndTimes
                             //CompTargetEffect_Manhunter manhunter = new CompTargetEffect_Manhunter();
                             //manhunter.DoEffectOn(pawn, pawn);
 
-                            pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter, "RH_TET_Reason_ChaosTaintBerserk".Translate(), true, false, (Pawn)null, false);
+                            pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter, "RH_TET_Reason_ChaosTaintBerserk".Translate(), true, true,
+                            false, (Pawn)null);
 
                             // Send a message to the user about this having happened.
                             Messages.Message("RH_TET_PawnWildSuccumbedToChaos_Berserk".Translate(pawn).CapitalizeFirst(), pawn, MessageTypeDefOf.NegativeHealthEvent, false);
@@ -233,7 +236,7 @@ namespace TheEndTimes
             if (map == null)
                 return;
 
-            List<Pawn> allPawnsSpawned = map?.mapPawns?.AllPawnsSpawned;
+            IReadOnlyList<Pawn> allPawnsSpawned = map?.mapPawns?.AllPawnsSpawned;
 
             if (allPawnsSpawned == null)
                 return;

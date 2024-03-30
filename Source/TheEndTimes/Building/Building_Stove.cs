@@ -37,7 +37,7 @@ namespace TheEndTimes
                 this.heatPusherComp.Props.heatPerSecond = 0f;
                 this.glowerComp.Props.glowRadius = 0f;
             }
-            Map.mapDrawer.MapMeshDirty(base.Position, MapMeshFlag.Things);
+            Map.mapDrawer.MapMeshDirty(this.Position, (ulong)MapMeshFlagDefOf.Things);
             Map.glowGrid.RegisterGlower(this.glowerComp);
         }
 

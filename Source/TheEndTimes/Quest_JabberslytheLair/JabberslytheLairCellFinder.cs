@@ -105,7 +105,7 @@ namespace TheEndTimes
             }
             num2 = Mathf.Pow(num2, 1.55f);
             float num3 = Mathf.InverseLerp(0f, 12f, (float)num);
-            float num4 = Mathf.Lerp(1f, 0.18f, map.glowGrid.GameGlowAt(cell, false));
+            float num4 = Mathf.Lerp(1f, 0.18f, map.glowGrid.GroundGlowAt(cell));
             float num5 = 1f - Mathf.Clamp(JabberslytheLairCellFinder.DistToBlocker(cell, map) / 11f, 0f, 0.6f);
             float num6 = Mathf.InverseLerp(-17f, -7f, temperature);
             float num7 = num2 * num3 * num5 * mountainousnessScoreAt * num4 * num6;

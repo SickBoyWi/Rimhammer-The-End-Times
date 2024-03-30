@@ -338,7 +338,8 @@ namespace TheEndTimes
             this.spawnedPawns.Add(pawn);
             this.Map.attackTargetsCache.TargetsHostileToFaction(Find.FactionManager.OfPlayer).Add(pawn);
             GenSpawn.Spawn(pawn, CellFinder.RandomClosewalkCellNear(base.Position, base.Map, 2, null), base.Map, WipeMode.Vanish);
-            pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent, null, false, false, null, true);
+            pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent, null, true, true,
+                            false, (Pawn)null);
             Lord lord = this.Lord;
             if (lord == null)
             {

@@ -9,6 +9,7 @@ namespace TheEndTimes
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
+            /* 1.5 updates. These are no longer available in the defof class. Just let the pawns have weird health issue. It makes sense that they would.
             var hediffsToRemove = this?.health?.hediffSet?.hediffs.FindAll(x =>
                 x.def == RimWorld.HediffDefOf.BadBack ||
                 x.def == RimWorld.HediffDefOf.Cataract ||
@@ -21,6 +22,7 @@ namespace TheEndTimes
                         this?.health?.RemoveHediff(hd);
                     }
             }
+            */
         }
 
         public Thought_Memory GiveObservedThought(Pawn p)

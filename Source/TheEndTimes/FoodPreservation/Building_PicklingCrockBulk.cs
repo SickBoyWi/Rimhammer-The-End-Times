@@ -263,25 +263,24 @@ namespace TheEndTimes
             return thing;
         }
 
-        public override void Draw()
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
-            base.Draw();
-            if (!this.Empty)
+            base.DrawAt(drawLoc, flip);
+            if (this.Empty)
+                return;
+            Vector3 vector3 = drawLoc;
+            vector3.y += 0.03846154f;
+            vector3.z += 0.25f;
+            GenDraw.DrawFillableBar(new GenDraw.FillableBarRequest()
             {
-                Vector3 drawPos = this.DrawPos;
-                drawPos.y += 0.046875f;
-                drawPos.z += 0.00f;
-                GenDraw.DrawFillableBar(new GenDraw.FillableBarRequest()
-                {
-                    center = drawPos,
-                    size = Building_PicklingCrockBulk.BarSize,
-                    fillPercent = (float)this.stuffCount / (float)MaxCapacity,
-                    filledMat = this.BarFilledMat,
-                    unfilledMat = Building_PicklingCrockBulk.BarUnfilledMat,
-                    margin = 0.1f,
-                    rotation = Rot4.North
-                });
-            }
+                center = vector3,
+                size = Building_PicklingCrockBulk.BarSize,
+                fillPercent = (float)this.stuffCount / 25f,
+                filledMat = this.BarFilledMat,
+                unfilledMat = Building_PicklingCrockBulk.BarUnfilledMat,
+                margin = 0.1f,
+                rotation = Rot4.North
+            });
         }
 
         public override IEnumerable<Gizmo> GetGizmos()
