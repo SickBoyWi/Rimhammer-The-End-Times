@@ -385,6 +385,28 @@
 		</nomatch>
 	</Operation>
 
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimhammer - Story Tellers</li>
+		</mods>
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<order>Append</order>
+					<xpath>/Defs/StorytellerDef[defName = "RH_TET_KarlFranz"]/comps</xpath>
+					<value>
+						<li Class="StorytellerCompProperties_SingleOnceFixed">
+							<fireAfterDaysPassed>20</fireAfterDaysPassed>
+							<incident>RH_TET_ChaosPortalGreatJourneyOffer</incident>
+							<allowedTargetTags>
+								<li>World</li>
+							</allowedTargetTags>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</nomatch>
+	</Operation>
 
 </Patch>
 
