@@ -12,7 +12,7 @@
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		<maxCountAtGameStart>1</maxCountAtGameStart>
 		<canMakeRandomly>true</canMakeRandomly>
-		<canSiege>true</canSiege>
+		<canSiege>false</canSiege>
 		<canStageAttacks>true</canStageAttacks>
 		<leaderTitle>boss</leaderTitle>
 		<factionIconPath>World/outcasts</factionIconPath>
