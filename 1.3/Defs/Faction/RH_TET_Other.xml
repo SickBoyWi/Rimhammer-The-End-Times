@@ -4,7 +4,7 @@
   <FactionDef ParentName="FactionBase">
 	<defName>RH_TET_Outcasts</defName>
 	<label>outcast band</label>
-    <description>A loose confederation of outcast gangs who've agreed to mostly fight outsiders instead of fighting each other.\n\Outcasts don't gnerally sow, they don't build much, and they rarely trade. Driven by a blood-and-honor culture that values personal strength and ruthlessness, they enrich themselves by raiding and robbing their more productive neighbors.\n\nTheir ranks are made up of many races, and they accept any one willing to submit to the current boss, and do violence.</description>
+    <description>A loose confederation of outcast gangs who've agreed to mostly fight outsiders instead of fighting each other.\n\Outcasts don't generally sow, they don't build much, and they rarely trade. Driven by a blood-and-honor culture that values personal strength and ruthlessness, they enrich themselves by raiding and robbing their more productive neighbors.\n\nTheir ranks are made up of many races, and they accept any one willing to submit to the current boss, and do violence.</description>
     <pawnSingular>outcast</pawnSingular>
     <pawnsPlural>outcasts</pawnsPlural>
     <listOrderPriority>10</listOrderPriority>
