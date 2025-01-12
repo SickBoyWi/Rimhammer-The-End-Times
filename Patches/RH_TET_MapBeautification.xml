@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>BiomesKit (Continued)</li>
+			<li>ReGrowth: Core</li>
+		</mods>
+		<match Class="PatchOperationAddModExtension">
+			<xpath>/Defs/BiomeDef[defName = "RH_TET_ChaosWastes"]</xpath>
+			<value>
+				<li Class = "BiomesKit.BiomesKitControls">
+					<forested>false</forested>
+					<uniqueHills>true</uniqueHills>
+					<materialRandomRotation>false</materialRandomRotation>
+					<smallHillSizeMultiplier>1.5</smallHillSizeMultiplier>
+					<largeHillSizeMultiplier>2</largeHillSizeMultiplier>
+					<mountainSizeMultiplier>1.4</mountainSizeMultiplier>
+					<impassableSizeMultiplier>1.3</impassableSizeMultiplier>
+				</li>
+			</value>
+		</match>
+	</Operation>
+	
+</Patch>
