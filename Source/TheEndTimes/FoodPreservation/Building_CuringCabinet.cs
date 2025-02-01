@@ -272,7 +272,7 @@ namespace TheEndTimes
             {
                 center = vector3,
                 size = Building_CuringCabinet.BarSize,
-                fillPercent = (float)this.stuffCount / 25f,
+                fillPercent = (float)this.stuffCount / MaxCapacity,
                 filledMat = this.BarFilledMat,
                 unfilledMat = Building_CuringCabinet.BarUnfilledMat,
                 margin = 0.1f,
