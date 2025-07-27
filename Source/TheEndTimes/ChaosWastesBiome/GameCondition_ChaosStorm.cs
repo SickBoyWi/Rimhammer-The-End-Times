@@ -38,7 +38,7 @@ namespace TheEndTimes
 
         public override void GameConditionTick()
         {
-            List<Map> affectedMaps = base.AffectedMaps;
+            List<Map> affectedMaps = this.AffectedMaps;
             if (Find.TickManager.TicksGame % 3451 == 0)
             {
                 for (int i = 0; i < affectedMaps.Count; i++)
@@ -48,10 +48,8 @@ namespace TheEndTimes
             }
             for (int j = 0; j < this.overlays.Count; j++)
             {
-                for (int k = 0; k < affectedMaps.Count; k++)
-                {
-                    this.overlays[j].TickOverlay(affectedMaps[k]);
-                }
+                for (int k = 0; k < affectedMaps.Count; ++k)
+                    this.overlays[j].TickOverlay(affectedMaps[k], 1f);
             }
         }
 

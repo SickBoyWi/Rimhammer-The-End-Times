@@ -21,34 +21,31 @@ namespace TheEndTimes
             else if ((building.def.graphicData.linkFlags & (LinkFlags.Wall | LinkFlags.Rock)) == 0)
                 return "Must be placed on walls.";
 
-            if (rot.FacingCell != null)
+
+            IntVec3 facingLoc = loc;
+
+            switch (rot.AsInt)
             {
-
-                IntVec3 facingLoc = loc;
-
-                switch (rot.AsInt)
-                {
-                    case 0: // south
-                        --facingLoc.z;
-                        break;
-                    case 1: // west
-                        --facingLoc.x;
-                        break;
-                    case 2: // north
-                        ++facingLoc.z;
-                        break;
-                    case 3: // east
-                        ++facingLoc.x;
-                        break;
-                    default:
-                        throw new System.Exception($"RH_TET: PlaceWorker_BuildingWall " +
-                            "found an invalid rotation for placed thing at {loc}.");
-                }
-                
-                Building facingLocBuilding = facingLoc.GetEdifice(map);
-                if (facingLocBuilding != null && facingLocBuilding.def != null && facingLocBuilding.def.graphicData != null && IsWallRockDoorOrSolid(facingLocBuilding))
-                    return (AcceptanceReport)("Must have open space in front.");
+                case 0: // south
+                    --facingLoc.z;
+                    break;
+                case 1: // west
+                    --facingLoc.x;
+                    break;
+                case 2: // north
+                    ++facingLoc.z;
+                    break;
+                case 3: // east
+                    ++facingLoc.x;
+                    break;
+                default:
+                    throw new System.Exception($"RH_TET: PlaceWorker_BuildingWall " +
+                        "found an invalid rotation for placed thing at {loc}.");
             }
+                
+            Building facingLocBuilding = facingLoc.GetEdifice(map);
+            if (facingLocBuilding != null && facingLocBuilding.def != null && facingLocBuilding.def.graphicData != null && IsWallRockDoorOrSolid(facingLocBuilding))
+                return (AcceptanceReport)("Must have open space in front.");
 
             return AcceptanceReport.WasAccepted;
         }

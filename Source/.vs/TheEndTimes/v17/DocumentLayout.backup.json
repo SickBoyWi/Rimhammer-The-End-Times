@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times\\Source\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2C53833E-4687-4D26-ABB6-52A112239B6D}|TheEndTimes\\TheEndTimes.csproj|d:\\backup\\modding\\rimworld\\repositories\\rimhammer-the-end-times\\source\\theendtimes\\quest_generic\\questnode_getsitetilemountaincave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C53833E-4687-4D26-ABB6-52A112239B6D}|TheEndTimes\\TheEndTimes.csproj|solutionrelative:theendtimes\\quest_generic\\questnode_getsitetilemountaincave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C53833E-4687-4D26-ABB6-52A112239B6D}|TheEndTimes\\TheEndTimes.csproj|d:\\backup\\modding\\rimworld\\repositories\\rimhammer-the-end-times\\source\\theendtimes\\quest_victory_chaosportalgreat\\incidentworker_chaosportalgreat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C53833E-4687-4D26-ABB6-52A112239B6D}|TheEndTimes\\TheEndTimes.csproj|solutionrelative:theendtimes\\quest_victory_chaosportalgreat\\incidentworker_chaosportalgreat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C53833E-4687-4D26-ABB6-52A112239B6D}|TheEndTimes\\TheEndTimes.csproj|D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times\\Source\\theendtimes\\quest_generic\\questnode_getsitetileflathills.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C53833E-4687-4D26-ABB6-52A112239B6D}|TheEndTimes\\TheEndTimes.csproj|solutionrelative:theendtimes\\quest_generic\\questnode_getsitetileflathills.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C53833E-4687-4D26-ABB6-52A112239B6D}|TheEndTimes\\TheEndTimes.csproj|D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times\\Source\\theendtimes\\placeworker\\placeworker_ontopofwalls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C53833E-4687-4D26-ABB6-52A112239B6D}|TheEndTimes\\TheEndTimes.csproj|solutionrelative:theendtimes\\placeworker\\placeworker_ontopofwalls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C53833E-4687-4D26-ABB6-52A112239B6D}|TheEndTimes\\TheEndTimes.csproj|D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times\\Source\\theendtimes\\chaoswastesbiome\\gamecondition_chaosstorm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C53833E-4687-4D26-ABB6-52A112239B6D}|TheEndTimes\\TheEndTimes.csproj|solutionrelative:theendtimes\\chaoswastesbiome\\gamecondition_chaosstorm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "QuestNode_GetSiteTileMountainCave.cs",
+              "DocumentMoniker": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times\\Source\\TheEndTimes\\Quest_Generic\\QuestNode_GetSiteTileMountainCave.cs",
+              "RelativeDocumentMoniker": "TheEndTimes\\Quest_Generic\\QuestNode_GetSiteTileMountainCave.cs",
+              "ToolTip": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times\\Source\\TheEndTimes\\Quest_Generic\\QuestNode_GetSiteTileMountainCave.cs",
+              "RelativeToolTip": "TheEndTimes\\Quest_Generic\\QuestNode_GetSiteTileMountainCave.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAIwDcAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T14:08:37.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IncidentWorker_ChaosPortalGreat.cs",
+              "DocumentMoniker": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times\\Source\\TheEndTimes\\Quest_Victory_ChaosPortalGreat\\IncidentWorker_ChaosPortalGreat.cs",
+              "RelativeDocumentMoniker": "TheEndTimes\\Quest_Victory_ChaosPortalGreat\\IncidentWorker_ChaosPortalGreat.cs",
+              "ToolTip": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times\\Source\\TheEndTimes\\Quest_Victory_ChaosPortalGreat\\IncidentWorker_ChaosPortalGreat.cs",
+              "RelativeToolTip": "TheEndTimes\\Quest_Victory_ChaosPortalGreat\\IncidentWorker_ChaosPortalGreat.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAEwBcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T14:02:30.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "QuestNode_GetSiteTileFlatHills.cs",
+              "DocumentMoniker": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times\\Source\\TheEndTimes\\Quest_Generic\\QuestNode_GetSiteTileFlatHills.cs",
+              "RelativeDocumentMoniker": "TheEndTimes\\Quest_Generic\\QuestNode_GetSiteTileFlatHills.cs",
+              "ToolTip": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times\\Source\\TheEndTimes\\Quest_Generic\\QuestNode_GetSiteTileFlatHills.cs",
+              "RelativeToolTip": "TheEndTimes\\Quest_Generic\\QuestNode_GetSiteTileFlatHills.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAtwEUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T16:48:30.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlaceWorker_OnTopOfWalls.cs",
+              "DocumentMoniker": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times\\Source\\TheEndTimes\\PlaceWorker\\PlaceWorker_OnTopOfWalls.cs",
+              "RelativeDocumentMoniker": "TheEndTimes\\PlaceWorker\\PlaceWorker_OnTopOfWalls.cs",
+              "ToolTip": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times\\Source\\TheEndTimes\\PlaceWorker\\PlaceWorker_OnTopOfWalls.cs",
+              "RelativeToolTip": "TheEndTimes\\PlaceWorker\\PlaceWorker_OnTopOfWalls.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAD4vysAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T16:47:39.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameCondition_ChaosStorm.cs",
+              "DocumentMoniker": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times\\Source\\TheEndTimes\\ChaosWastesBiome\\GameCondition_ChaosStorm.cs",
+              "RelativeDocumentMoniker": "TheEndTimes\\ChaosWastesBiome\\GameCondition_ChaosStorm.cs",
+              "ToolTip": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-The-End-Times\\Source\\TheEndTimes\\ChaosWastesBiome\\GameCondition_ChaosStorm.cs",
+              "RelativeToolTip": "TheEndTimes\\ChaosWastesBiome\\GameCondition_ChaosStorm.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAA1wDEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T16:44:47.194Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

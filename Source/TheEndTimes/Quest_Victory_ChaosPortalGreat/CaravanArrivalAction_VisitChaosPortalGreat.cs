@@ -35,7 +35,9 @@ namespace TheEndTimes
             this.target = (MapParent)chaosPortalGreat.parent;
         }
 
-        public override FloatMenuAcceptanceReport StillValid(Caravan caravan, int destinationTile)
+        public override FloatMenuAcceptanceReport StillValid(
+              Caravan caravan,
+              PlanetTile destinationTile)
         {
             FloatMenuAcceptanceReport floatMenuAcceptanceReport = base.StillValid(caravan, destinationTile);
             if (!floatMenuAcceptanceReport)

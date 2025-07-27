@@ -12,18 +12,18 @@ namespace TheEndTimes
 
         protected override bool CanFireNowSub(IncidentParms parms)
         {
-            int num;
+            PlanetTile num;
             return this.TryFindRootTile(out num);
         }
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
-            int rootTile;
+            PlanetTile rootTile;
             if (!this.TryFindRootTile(out rootTile))
             {
                 return false;
             }
-            int tile;
+            PlanetTile tile;
             if (!this.TryFindDestinationTile(rootTile, out tile))
             {
                 return false;
@@ -47,13 +47,13 @@ namespace TheEndTimes
             return true;
         }
 
-        private bool TryFindRootTile(out int tile)
+        private bool TryFindRootTile(out PlanetTile tile)
         {
-            int unused;
-            return TileFinder.TryFindRandomPlayerTile(out tile, false, (int x) => this.TryFindDestinationTileActual(x, 180, out unused));
+            PlanetTile unused;
+            return TileFinder.TryFindRandomPlayerTile(out tile, false, (PlanetTile x) => this.TryFindDestinationTileActual(x, 180, out unused));
         }
 
-        private bool TryFindDestinationTile(int rootTile, out int tile)
+        private bool TryFindDestinationTile(int rootTile, out PlanetTile tile)
         {
             int num = 800;
             for (int i = 0; i < 1000; i++)
@@ -76,7 +76,7 @@ namespace TheEndTimes
             return false;
         }
 
-        private bool TryFindDestinationTileActual(int rootTile, int minDist, out int tile)
+        private bool TryFindDestinationTileActual(int rootTile, int minDist, out PlanetTile tile)
         {
             WorldReachability wr = new WorldReachability();
 
@@ -84,7 +84,7 @@ namespace TheEndTimes
             {
                 bool canTraverseImpassable = i == 1;
                 if (TileFinder.TryFindPassableTileWithTraversalDistance(rootTile, minDist, 800, out tile, 
-                        (int x) => wr.CanReach(rootTile, x) && !Find.WorldObjects.AnyWorldObjectAt(x) && Find.WorldGrid[x].hilliness != Hilliness.Impassable && Find.WorldGrid[x].biome.canBuildBase && Find.WorldGrid[x].biome.canAutoChoose, 
+                        (PlanetTile x) => wr.CanReach(rootTile, x) && !Find.WorldObjects.AnyWorldObjectAt(x) && Find.WorldGrid[x].hilliness != Hilliness.Impassable && Find.WorldGrid[x].tile.Tile.PrimaryBiome.canBuildBase && Find.WorldGrid[x].tile.Tile.PrimaryBiome.canAutoChoose, 
                         true, TileFinderMode.Random, true, canTraverseImpassable))
                 {
                     return true;

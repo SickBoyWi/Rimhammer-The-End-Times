@@ -43,7 +43,6 @@
 		<building>
 			<claimable>false</claimable>
 			<ai_combatDangerous>true</ai_combatDangerous>
-			<soundAmbient>RH_TET_ChaosPortalAmbient</soundAmbient>
 		</building>
 		<killedLeavings>
 			<BlocksMarble>175</BlocksMarble>
@@ -51,6 +50,10 @@
 			<Uranium>50</Uranium>
 		</killedLeavings>
 		<comps>
+			<li Class="CompProperties_AmbientSound">
+				<sound>RH_TET_ChaosPortalAmbient</sound>
+				<disabledOnUnpowered>true</disabledOnUnpowered>
+			</li>
 			<li Class="CompProperties_HeatPusher">
 				<heatPerSecond>6</heatPerSecond>
 				<heatPushMaxTemperature>38</heatPushMaxTemperature>
@@ -100,13 +103,16 @@
 		<building>
 			<claimable>false</claimable>
 			<ai_combatDangerous>true</ai_combatDangerous>
-			<soundAmbient>RH_TET_ChaosPortalAmbient</soundAmbient>
 		</building>
 		<killedLeavings>
 			<ChunkSlagSteel>15</ChunkSlagSteel>
 			<Uranium>200</Uranium>
 		</killedLeavings>
 		<comps>
+			<li Class="CompProperties_AmbientSound">
+				<sound>RH_TET_ChaosPortalAmbient</sound>
+				<disabledOnUnpowered>true</disabledOnUnpowered>
+			</li>
 			<li Class="CompProperties_HeatPusher">
 				<heatPerSecond>15</heatPerSecond>
 				<heatPushMaxTemperature>38</heatPushMaxTemperature>

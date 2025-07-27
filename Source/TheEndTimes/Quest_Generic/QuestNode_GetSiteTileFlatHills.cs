@@ -33,7 +33,7 @@ namespace TheEndTimes
         private bool TryFindTile(Slate slate, out int tile)
         {
             Map map = slate.Get<Map>("map", (Map)null, false) ?? Find.RandomPlayerHomeMap;
-            int nearThisTile1 = map != null ? map.Tile : -1;
+            int nearThisTile1 = map != null ? map.Tile : PlanetTile.Invalid;
             IntRange var;
             if (slate.TryGet<IntRange>("siteDistRange", out var, false))
                 return QuestNode_GetSiteTileFlatHills.TryFindNewSiteTile(out tile, var.min, var.max, this.allowCaravans.GetValue(slate), this.preferCloserTiles.GetValue(slate), nearThisTile1);
@@ -53,7 +53,7 @@ namespace TheEndTimes
             {
                 int minDist2 = minDist;
                 int maxDist2 = maxDist;
-                Predicate<int> validator = (int x) =>
+                Predicate<PlanetTile> validator = (PlanetTile x) =>
                     !Find.WorldObjects.AnyWorldObjectAt(x)
                     && (Find.WorldGrid[x].hilliness == Hilliness.Flat
                         || Find.WorldGrid[x].hilliness == Hilliness.SmallHills)
@@ -61,7 +61,7 @@ namespace TheEndTimes
                 TileFinderMode tfe = TileFinderMode.Random;
                 if (preferCloserTiles)
                     tfe = TileFinderMode.Near;
-                int result;
+                PlanetTile result;
                 if (TileFinder.TryFindPassableTileWithTraversalDistance(root, minDist2, maxDist2, out result, validator,
                     false, tfe, false, false))
                 {
@@ -69,12 +69,12 @@ namespace TheEndTimes
                 }
                 return -1;
             };
-            int arg;
+            PlanetTile arg;
             if (nearThisTile != -1)
             {
                 arg = nearThisTile;
             }
-            else if (!TileFinder.TryFindRandomPlayerTile(out arg, allowCaravans, (int x) => findTile(x) != -1))
+            else if (!TileFinder.TryFindRandomPlayerTile(out arg, allowCaravans, (PlanetTile x) => findTile(x) != -1))
             {
                 tile = -1;
                 return false;

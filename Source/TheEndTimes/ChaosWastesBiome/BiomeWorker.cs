@@ -8,7 +8,7 @@ namespace TheEndTimes
 {
     class RH_TET_BiomeWorker_ChaosWaste : BiomeWorker_Tundra
     {
-        public override float GetScore(Tile tile, int id)
+        public override float GetScore(BiomeDef biome, Tile tile, PlanetTile planetTile)
         {
             if (Settings.HaveChaosWastes)
             {
@@ -23,7 +23,7 @@ namespace TheEndTimes
                 }
                 */
 
-                return ConsiderLatitude(id);
+                return ConsiderLatitude(tile.tile.tileId);
             }
             else
             { 

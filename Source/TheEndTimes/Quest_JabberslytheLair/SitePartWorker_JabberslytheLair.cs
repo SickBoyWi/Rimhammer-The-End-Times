@@ -33,7 +33,7 @@ namespace TheEndTimes
         
         public override SitePartParams GenerateDefaultParams(
               float myThreatPoints,
-              int tile,
+              PlanetTile tile,
               Faction faction)
         {
             SitePartParams defaultParams = base.GenerateDefaultParams(myThreatPoints, tile, faction);

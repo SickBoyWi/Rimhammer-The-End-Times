@@ -32,9 +32,9 @@ namespace TheEndTimes
         }
 
         public override SitePartParams GenerateDefaultParams(
-          float myThreatPoints,
-          int tile,
-          Faction faction)
+              float myThreatPoints,
+              PlanetTile tile,
+              Faction faction)
         {
             if (faction == null)
             {

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<PawnKindDef Name="RH_TET_MedievalBase" Abstract="True">
+		<defaultFactionType>TribeCivil</defaultFactionType>
+		<chemicalAddictionChance>0.0</chemicalAddictionChance>
+		<backstoryCryptosleepCommonality>0.0</backstoryCryptosleepCommonality>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Tribal</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		<apparelTags>
+			<li>Tribal</li>
+		</apparelTags>
+		<invNutrition>2.55</invNutrition>
+		<invFoodDef>Pemmican</invFoodDef>
+		<initialResistanceRange>0~0</initialResistanceRange>
+		<initialWillRange>0~0</initialWillRange>
+	</PawnKindDef>
+
+	<PawnKindDef Name="RH_TET_Villager" ParentName="RH_TET_MedievalBase">
+		<defName>RH_TET_Villager</defName>
+		<label>villager</label>
+		<race>Human</race>
+		<combatPower>30</combatPower>
+		<itemQuality>Poor</itemQuality>
+		<gearHealthRange>
+			<min>0.2</min>
+			<max>2.0</max>
+		</gearHealthRange>
+		<apparelAllowHeadgearChance>0.0</apparelAllowHeadgearChance>
+		<apparelMoney>
+			<min>300</min>
+			<max>500</max>
+		</apparelMoney>
+		<apparelRequired>
+			<li>Apparel_BasicShirt</li>
+			<li>Apparel_Pants</li>
+		</apparelRequired>
+		<techHediffsChance>0</techHediffsChance>
+		<invNutrition>0</invNutrition>
+	</PawnKindDef>
+
+	<PawnKindDef Name="RH_TET_MedievalOutlanderBase" Abstract="True">
+		<race>Human</race>
+		<defaultFactionType>RH_TET_Outcasts</defaultFactionType>
+		<chemicalAddictionChance>0.05</chemicalAddictionChance>
+		<backstoryCryptosleepCommonality>0.0</backstoryCryptosleepCommonality>
+		<invNutrition>2.55</invNutrition>
+		<apparelTags>
+			<li>IndustrialBasic</li>
+			<li>IndustrialAdvanced</li>
+		</apparelTags>
+		<initialResistanceRange>11~16</initialResistanceRange>
+		<initialWillRange>1~3</initialWillRange>
+	</PawnKindDef>
+  
+	<PawnKindDef ParentName="RH_TET_MedievalOutlanderBase">
+		<defName>RH_TET_OutcastTrader</defName>
+		<label>outcast trader</label>
+		<trader>true</trader>
+		<combatPower>100</combatPower>
+		<itemQuality>Good</itemQuality>
+		<weaponTags>
+			<li>MedievalMeleeDecent</li>
+		</weaponTags>
+		<apparelRequired>
+			<li>Apparel_CollarShirt</li>
+			<li>Apparel_Pants</li>
+			<li>Apparel_Duster</li>
+			<li>Apparel_CowboyHat</li>
+		</apparelRequired>
+	</PawnKindDef>
+  
+</Defs>

@@ -206,7 +206,7 @@ namespace TheEndTimes
 
         private static void ApplyColonistMutatedThought(Pawn victim)
         {
-            foreach (Pawn current in PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive)
+            foreach (Pawn current in PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive)
             {
                 if (current != victim && current.needs != null && current.needs.mood != null)
                 {
@@ -245,7 +245,7 @@ namespace TheEndTimes
             {
                 Pawn pawn = allPawnsSpawned[i];
 
-                if (pawn == null || pawn.Position == null || pawn.def == null || pawn.def.race == null || pawn.KindLabel == null)
+                if (pawn == null || pawn.def == null || pawn.def.race == null || pawn.KindLabel == null)
                     continue;
 
                 // Don't check for pawns that are under a roof, non flesh pawns, or those that have a kind label that starts with chaos (exclude spawns and other chaos critters)

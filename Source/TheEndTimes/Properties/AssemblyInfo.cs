@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 //General information about an assembly is controlled by the following attributes.
 //Modify these attributes ​​to change the information associated with an assembly.
 [assembly: AssemblyTitle("TheEndTimes")]
-[assembly: AssemblyDescription("Removes all post medieval things from RimWorld, adds Chaos Wastes biome as well.")]
+[assembly: AssemblyDescription("Adds biomes and critters that are Warhammer themed.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("TheEndTimes")]
@@ -26,5 +26,5 @@ using System.Runtime.InteropServices;
 //
 // You can specify any values ​​or use default values ​​for the build and revision numbers by typing "*" as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.6.0.0")]
+[assembly: AssemblyFileVersion("1.6.0.0")]
