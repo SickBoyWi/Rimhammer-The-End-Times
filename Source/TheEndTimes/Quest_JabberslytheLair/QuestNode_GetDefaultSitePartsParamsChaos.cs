@@ -8,7 +8,7 @@ namespace TheEndTimes
 {
     public class QuestNode_GetDefaultSitePartsParamsChaos : QuestNode
     {
-        public SlateRef<int> tile;
+        public SlateRef<PlanetTile> tile;
         public SlateRef<Faction> faction;
         public SlateRef<IEnumerable<SitePartDef>> sitePartDefs;
         [NoTranslate]

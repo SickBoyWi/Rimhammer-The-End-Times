@@ -17,7 +17,7 @@ namespace TheEndTimes
             PlanetTile tile;
             if (!this.TryFindTile(slate, out tile))
                 return false;
-            slate.Set<int>(this.storeAs.GetValue(slate), tile, false);
+            slate.Set<PlanetTile>(this.storeAs.GetValue(slate), tile, false);
             return true;
         }
 
@@ -27,7 +27,7 @@ namespace TheEndTimes
             PlanetTile tile;
             if (!this.TryFindTile(RimWorld.QuestGen.QuestGen.slate, out tile))
                 return;
-            RimWorld.QuestGen.QuestGen.slate.Set<int>(this.storeAs.GetValue(slate), tile, false);
+            RimWorld.QuestGen.QuestGen.slate.Set<PlanetTile>(this.storeAs.GetValue(slate), tile, false);
         }
 
         private bool TryFindTile(Slate slate, out PlanetTile tile)
@@ -36,20 +36,20 @@ namespace TheEndTimes
             PlanetTile nearThisTile1 = map != null ? map.Tile : PlanetTile.Invalid;
             IntRange var;
             if (slate.TryGet<IntRange>("siteDistRange", out var, false))
-                return QuestNode_GetSiteTileMountainCave.TryFindNewSiteTile(out tile, var.min, var.max, this.allowCaravans.GetValue(slate), this.preferCloserTiles.GetValue(slate), nearThisTile1);
+                return QuestNode_GetSiteTileMountainCave.TryFindNewSiteTile(out tile, nearThisTile1, var.min, var.max, this.allowCaravans.GetValue(slate), this.preferCloserTiles.GetValue(slate));
 
             bool flag = this.preferCloserTiles.GetValue(slate);
             int num1 = this.allowCaravans.GetValue(slate) ? 1 : 0;
             int num2 = flag ? 1 : 0;
             PlanetTile nearThisTile2 = nearThisTile1;
-            return QuestNode_GetSiteTileMountainCave.TryFindNewSiteTile(out tile, 7, 27, num1 != 0, num2 != 0, nearThisTile2);
+            return QuestNode_GetSiteTileMountainCave.TryFindNewSiteTile(out tile, nearThisTile2, 7, 27, num1 != 0, num2 != 0);
         }        
         
         // Does what TileFinder.TryFindNewSiteTile does, except requires mountains and caves.
-        public static bool TryFindNewSiteTile(out PlanetTile tile, int minDist = 8, int maxDist = 30,
-            bool allowCaravans = false, bool preferCloserTiles = true, int nearThisTile = -1)
+        public static bool TryFindNewSiteTile(out PlanetTile tile, PlanetTile nearThisTile, int minDist = 8, int maxDist = 30,
+            bool allowCaravans = false, bool preferCloserTiles = true)
         {
-            Func<int, int> findTile = delegate (int root)
+            Func<PlanetTile, PlanetTile> findTile = delegate (PlanetTile root)
             {
                 int minDist2 = minDist;
                 int maxDist2 = maxDist;
@@ -67,21 +67,21 @@ namespace TheEndTimes
                 {
                     return result;
                 }
-                return -1;
+                return PlanetTile.Invalid;
             };
 
             PlanetTile arg;
-            if (nearThisTile != -1)
+            if (nearThisTile != null && nearThisTile != PlanetTile.Invalid)
             {
                 arg = nearThisTile;
             }
-            else if (!TileFinder.TryFindRandomPlayerTile(out arg, allowCaravans, (PlanetTile x) => findTile(x) != -1))
+            else if (!TileFinder.TryFindRandomPlayerTile(out arg, allowCaravans, (PlanetTile x) => findTile(x) != PlanetTile.Invalid))
             {
-                tile = -1;
+                tile = PlanetTile.Invalid;
                 return false;
             }
             tile = findTile(arg);
-            return tile != -1;
+            return tile != PlanetTile.Invalid;
         }
     }
 }

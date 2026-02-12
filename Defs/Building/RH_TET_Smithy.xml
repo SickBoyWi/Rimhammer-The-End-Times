@@ -91,8 +91,9 @@
 						<li>RH_TET_Coal</li>
 					</thingDefs>
 				</fuelFilter>
-				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>			
 				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+				<canEjectFuel>true</canEjectFuel>	
 			</li>
 			<li Class="CompProperties_Glower">
 				<glowRadius>6</glowRadius>

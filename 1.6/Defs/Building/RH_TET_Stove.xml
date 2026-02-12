@@ -74,6 +74,8 @@
 				<compClass>TheEndTimes.CompStoveRefuelable</compClass>
 				<heatPerSecond>21</heatPerSecond>
 				<heatPushMaxTemperature>28</heatPushMaxTemperature>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+				<canEjectFuel>true</canEjectFuel>				
 			</li>
 		</comps>
 		<designationCategory>Production</designationCategory>

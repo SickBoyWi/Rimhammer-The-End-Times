@@ -57,8 +57,10 @@
 						<li>RH_TET_Coal</li>
 					</thingDefs>
 				</fuelFilter>
-				<initialFuelPercent>1</initialFuelPercent>
+				<initialFuelPercent>1</initialFuelPercent>				
 				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+				<canEjectFuel>true</canEjectFuel>				
+
 			</li>
 			<li Class="CompProperties_Glower">
 				<glowRadius>15</glowRadius>
@@ -141,8 +143,9 @@
 						<li>WoodLog</li>
 					</thingDefs>
 				</fuelFilter>
-				<initialFuelPercent>1</initialFuelPercent>
+				<initialFuelPercent>1</initialFuelPercent>			
 				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+				<canEjectFuel>true</canEjectFuel>	
 			</li>
 			<!--
 		    <li Class="CompProperties_Glower">
@@ -292,8 +295,9 @@
 						<li>RH_TET_AnimalFat</li>
 					</thingDefs>
 				</fuelFilter>
-				<initialFuelPercent>1</initialFuelPercent>
+				<initialFuelPercent>1</initialFuelPercent>			
 				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+				<canEjectFuel>true</canEjectFuel>	
 			</li>
 			<li Class="CompProperties_Glower">
 				<glowRadius>5</glowRadius>
@@ -370,8 +374,9 @@
 						<li>RH_TET_AnimalFat</li>
 					</thingDefs>
 				</fuelFilter>
-				<initialFuelPercent>1</initialFuelPercent>
+				<initialFuelPercent>1</initialFuelPercent>			
 				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+				<canEjectFuel>true</canEjectFuel>	
 			</li>
 			<li Class="CompProperties_Glower">
 				<glowRadius>8</glowRadius>

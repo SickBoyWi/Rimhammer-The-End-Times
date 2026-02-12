@@ -17,7 +17,7 @@ namespace TheEndTimes
             int tile;
             if (!this.TryFindTile(slate, out tile))
                 return false;
-            slate.Set<int>(this.storeAs.GetValue(slate), tile, false);
+            slate.Set<PlanetTile>(this.storeAs.GetValue(slate), tile, false);
             return true;
         }
 
@@ -27,7 +27,7 @@ namespace TheEndTimes
             int tile;
             if (!this.TryFindTile(RimWorld.QuestGen.QuestGen.slate, out tile))
                 return;
-            RimWorld.QuestGen.QuestGen.slate.Set<int>(this.storeAs.GetValue(slate), tile, false);
+            RimWorld.QuestGen.QuestGen.slate.Set<PlanetTile>(this.storeAs.GetValue(slate), tile, false);
         }
 
         private bool TryFindTile(Slate slate, out int tile)
